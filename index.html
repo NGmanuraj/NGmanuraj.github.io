@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Nuwello Healthcare</title>
+</head>
+
+<body>
+    <!--navigation-->
+    <nav id="topnav">
+        <div id="logocover"> <i class="fas fa-layer-group fa-3x"></i>
+            <h1 id="logo">NUWELLO <br> <b>Healthcare</b></h1>
+        </div>
+        <ul id="topnavul">
+            <li class="topnavli" id="home" ><a href="index.html">Home</a></li>
+            <li class="topnavli" id="about" ><a href="more/Aboutus.html">About Us</a></li>
+            <li class="topnavli" id="division" ><a href="more/Division.html">Division</a></li>
+            <li class="topnavli" id="vision" ><a href="more/Vision.html">Vision</a></li>
+            <li class="topnavli" id="quality" ><a href="more/Quality.html">Quality</a></li>
+            <i class="fas fa-bars fa-2x" onclick="secnavDisplay()"></i>
+        </ul>
+    </nav>
+    <!--Secnav-->
+    <aside id="secnav" style="display: none;">
+        <h1>Nuwello <br> Healthcare</h1>
+        <i class="fas fa-times fa-lg" onclick="secnavDisplay()"></i>
+        <ul id="secnavul">
+            <li class="topnavli" id="home" ><a href="index.html">Home</a></li>
+            <li class="topnavli" id="about" ><a href="more/Aboutus.html">About Us</a></li>
+            <li class="topnavli" id="division" ><a href="more/Division.html">Division</a></li>
+            <li class="topnavli" id="vision" ><a href="more/Vision.html">Vision</a></li>
+            <li class="topnavli" id="quality" ><a href="more/Quality.html">Quality</a></li>
+        </ul>
+    </aside>
+    <!--Background Slider-->
+    <div class="slider">
+        <figure>
+            <img src="images/1.jpg" alt="">
+            <img src="images/2.jpg" alt="">
+            <img src="images/3a.jpg" alt="">
+            <img src="images/4.jpg" alt="">
+            <img src="images/1.jpg" alt="">
+        </figure>
+    </div>
+    <!--Section-->
+    <section id="content">
+        <aside id="cname">
+            <h1>NUWELLO</h1>
+            <h2>HEALTHCARE</h2>
+            <h3>WISH YOU HEALTH</h3>
+            <a href="more/Contactus.html" id="contact">Contact Us</a>
+        </aside>
+        <aside id="extra">
+
+        </aside>
+    </section>
+    <!--Footer-->
+    <footer>
+        <h3>&copy; Nuwello Healthcare Pvt Ltd</h3>
+    </footer>
+    <script>
+         function secnavDisplay(){
+            let secnav = document.getElementById('secnav');
+            if (secnav.style.display != 'none') {
+                secnav.style.display = 'none';
+            } else {
+                secnav.style.display = 'flex';
+            }
+        }
+    </script>
+</body>
+
+</html>

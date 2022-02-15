@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/all.min.css">
+    <title>Division</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url(../images/divisionbg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100%;
+            width: 100%;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        #logo {
+            font-size: 1.5rem;
+            position: absolute;
+            left: 2%;
+            top: 1.5%;
+            color: rgb(255, 0, 119);
+            z-index: 15;
+            border-bottom: 2px solid rgb(255, 0, 119);
+            padding: 5px;
+        }
+
+        .fa-times {
+            position: absolute;
+            right: 5%;
+            top: 4%;
+            color: white;
+            z-index: 15;
+            border: 2px solid white;
+            padding: 5px;
+        }
+
+        .fa-times:hover {
+            color: rgb(255, 100, 100);
+            border: 2px solid rgb(255, 100, 100);
+        }
+
+        article {
+            height: 94%;
+            width: 100%;
+            margin-top: 90px;
+            padding: 20px 7vw;
+            color: aliceblue;
+            position: absolute;
+            animation: bottomup 1s linear 1;
+            text-align: justify;
+            z-index: 1;
+        }
+
+        @keyframes bottomup {
+            from {
+                top: 100%;
+            }
+
+            to {
+                top: 0%;
+            }
+        }
+
+        article h2 {
+            margin-left: 1%;
+            margin-bottom: 1%;
+        }
+
+        article hr {
+            background-color: rgb(255, 255, 255);
+        }
+        article .linebreak{
+            background-color: rgb(1, 104, 71);
+            border: none;
+            height: 1px;
+        }
+
+        article h1 {
+            font-size: 2.25rem;
+            margin-top: 20px;
+            text-decoration: underline;
+            color: rgb(201, 255, 157);
+        }
+
+        article h6 {
+            font-size: 1.8rem;
+            color: rgb(99, 162, 243);
+            margin-top: 20px;
+            text-decoration:underline;
+        }
+
+        article p {
+            font-size: 1.5rem;
+            color: rgb(255, 108, 108);
+            padding: 10px;
+            margin-left: 1vw;
+        }
+
+        @media screen and (max-width:530px) {
+            article h1 {
+                font-size: 7vw;
+            }
+
+            article h6 {
+                font-size: 6vw;
+            }
+
+            article p {
+                font-size: 5vw;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="logo">Nuwello <br> Healthcare</h1>
+    <a href="../index.html"><i class="fas fa-times fa-lg"></i></a>
+    <article id="contactmore">
+        <h2>Division</h2>
+        <hr>
+        <h1>Nuwello's General Med</h1>
+        <h6>Livocitrigin :</h6>
+        <p>
+            Drug 1, drug 2<br>
+            Different kind of speciality
+        </p>
+        <hr class="linebreak">
+        <h6>Montequlast :</h6>
+        <p>
+            Drug 1, drug 2<br>
+            Different kind of speciality
+        </p>
+        <hr class="linebreak">
+        <h6>paracetamol :</h6>
+        <p>
+            Drug 1, drug 2<br>
+            different kind of speciality
+        </p>
+        <hr class="linebreak">
+        <h6>calcium :</h6>
+        <p>
+            Drug 1, drug 2<br>
+            different kind of speciality
+        </p>
+        <hr class="linebreak">
+        <h6>Vitamin :</h6>
+        <p>
+            Drug 1, drug 2<br>
+            different kind of speciality
+        </p>
+        <hr class="linebreak">
+    </article>
+</body>
+
+</html>

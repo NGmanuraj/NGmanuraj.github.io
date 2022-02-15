@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/all.min.css">
+    <title>Vision</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url(../images/contactbg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100%;
+            width: 100%;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        #logo {
+            font-size: 1.5rem;
+            position: absolute;
+            left: 2%;
+            top: 1.5%;
+            color: rgb(255, 0, 119);
+            z-index: 15;
+            border-bottom: 2px solid rgb(255, 0, 119);
+            padding: 5px;
+        }
+
+        .fa-times {
+            position: absolute;
+            right: 5%;
+            top: 4%;
+            color: white;
+            z-index: 15;
+            border: 2px solid white;
+            padding: 5px;
+        }
+
+        .fa-times:hover {
+            color: rgb(255, 100, 100);
+            border: 2px solid rgb(255, 100, 100);
+        }
+
+        article {
+            height: 94%;
+            width: 100%;
+            margin-top: 90px;
+            padding: 20px 7vw;
+            color: aliceblue;
+            position: absolute;
+            animation: bottomup 1s linear 1;
+            text-align: justify;
+            z-index: 1;
+        }
+
+        @keyframes bottomup {
+            from {
+                top: 100%;
+            }
+
+            to {
+                top: 0%;
+            }
+        }
+
+        article h2 {
+            margin-left: 1%;
+            margin-bottom: 1%;
+        }
+
+        article hr {
+            background-color: rgb(255, 255, 255);
+        }
+
+        article h1 {
+            font-size: 2.25rem;
+            margin-top: 20px;
+            text-decoration: underline;
+            color: rgb(255, 211, 157);
+        }
+
+        article h6 {
+            font-size: 1.8rem;
+            color: whitesmoke;
+            margin-top: 20px;
+            text-decoration: underline;
+        }
+
+        article p {
+            font-size: 1.5rem;
+            color: white;
+            padding: 10px;
+        }
+
+        @media screen and (max-width:530px) {
+            article h1 {
+                font-size: 7vw;
+            }
+
+            article h6 {
+                font-size: 6vw;
+            }
+
+            article p {
+                font-size: 5vw;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="logo">Nuwello <br> Healthcare</h1>
+    <a href="../index.html"><i class="fas fa-times fa-lg"></i></a>
+    <article id="contactmore">
+        <h2>Vision</h2>
+        <hr>
+        <h1>Nuwello Healthcare Pvt. Ltd</h1>
+        <h6>Marketing Office :</h6>
+        <p>
+            Ground Floor, Shahpura <br>
+            arera Colony, Bhopal, 462016
+        </p>
+        <h6>Registered Office :</h6>
+        <p>
+            Ground Floor, Somewhere<br>
+            some Colony,Indore, 452001
+        </p>
+        <h6>Telephone :</h6>
+        <p>
+            7400602747<br>
+            6261745714
+        </p>
+        <h6>Email :</h6>
+        <p>
+            nuwellohealthcare@gmail.com
+        </p>
+    </article>
+</body>
+
+</html>

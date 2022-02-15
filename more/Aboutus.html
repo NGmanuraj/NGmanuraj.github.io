@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/all.min.css">
+    <title>About Us</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url(images/contactbg.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100%;
+            width: 100%;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        #logo {
+            font-size: 1.5rem;
+            position: absolute;
+            left: 2%;
+            top: 1.5%;
+            color: rgb(255, 0, 119);
+            z-index: 15;
+            border-bottom: 2px solid rgb(255, 0, 119);
+            padding: 5px;
+        }
+
+        .fa-times {
+            position: absolute;
+            right: 5%;
+            top: 4%;
+            color: white;
+            z-index: 15;
+            border: 2px solid white;
+            padding: 5px;
+        }
+
+        .fa-times:hover {
+            color: rgb(255, 100, 100);
+            border: 2px solid rgb(255, 100, 100);
+        }
+
+        article {
+            height: 94%;
+            width: 100%;
+            margin-top: 90px;
+            padding: 20px 7vw;
+            color: aliceblue;
+            position: absolute;
+            animation: bottomup 1s linear 1;
+            text-align: justify;
+            z-index: 1;
+        }
+
+        @keyframes bottomup {
+            from {
+                top: 100%;
+            }
+
+            to {
+                top: 0%;
+            }
+        }
+
+        article h2 {
+            margin-left: 1%;
+            margin-bottom: 1%;
+        }
+
+        article hr {
+            background-color: rgb(255, 255, 255);
+        }
+
+        article div {
+            width: 630px;
+            height: 100%;
+            margin-top: 10px;
+            overflow: auto;
+        }
+
+        article h1 {
+            font-size: 1.5rem;
+            display: inline;
+            padding: 10px;
+            text-decoration: underline;
+            color: rgb(255, 211, 157);
+        }
+
+        article p {
+            font-size: 1.5rem;
+            color: white;
+            padding: 10px;
+            display: inline;
+        }
+
+        @media screen and (max-width:750px) {
+            article div {
+                width: 100%;
+            }
+        }
+.slider{
+    height: 20vw;
+}
+        @media screen and (max-width:530px) {
+            article h1 {
+                font-size: 5vw;
+            }
+
+            article p {
+                font-size: 5vw;
+            }
+        }
+
+        .slider {
+            width: 100%;
+            height: 50%;
+            margin-top: 10px;
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        figure {
+            width: 500%;
+            height: 100%;
+            position: relative;
+            animation: slide 20s linear 0s infinite;
+        }
+
+        img {
+            width: 20%;
+            height: 100%;
+            float: left;
+        }
+
+        @keyframes slide {
+            0% {
+                left: 0%;
+            }
+
+            20% {
+                left: 0%;
+            }
+
+            25% {
+                left: -100%;
+            }
+
+            45% {
+                left: -100%;
+            }
+
+            50% {
+                left: -200%;
+            }
+
+            70% {
+                left: -200%;
+            }
+
+            75% {
+                left: -300%;
+            }
+
+            95% {
+                left: -300%;
+            }
+
+            100% {
+                left: -400%;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1 id="logo">Nuwello <br> Healthcare</h1>
+    <a href="../index.html"><i class="fas fa-times fa-lg"></i></a>
+    <article id="contactmore">
+        <h2>About Us</h2>
+        <hr>
+        <div>
+            <p>
+                we want to trell you lots of things about</p>
+            <h1>Nuwello Healthcare Pvt. Ltd.</h1>
+            <p>
+                but at the current time we don't know about it so we are hardly trying to
+                geather information about it. soon you will see lots of information about us. We are hungary for telling
+                you
+                thing because you are the one for whom we are here and we are proud for it. And we all from core of
+                heart
+                wants
+                that you all stay healthy. Our motto "Wish You Health" also specify what we want.
+            </p>
+            <section class="slider">
+                <figure>
+                    <img src="../images/1.jpg" alt="">
+                    <img src="../images/2.jpg" alt="">
+                    <img src="../images/3a.jpg" alt="">
+                    <img src="../images/4.jpg" alt="">
+                    <img src="../images/1.jpg" alt="">
+                </figure>
+            </section>
+        </div>
+    </article>
+</body>
+
+</html>

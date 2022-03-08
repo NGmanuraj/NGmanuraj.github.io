@@ -4,231 +4,307 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
 body{
+    height: 100%;
     width: 100%;
-    height: 100vh;
-    background-image: url(images/1.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size:cover;
-    animation: slider 20s infinite;
-    overflow: auto;
-}
-body::before{
-    content: "";
-    position:fixed;
-    top: 0%;
-    right: 0%;
-    left: 0%;
-    bottom: 0%;
-    background:#013328b7;
-    background-size: cover;
-    background-attachment: fixed;
-}
-@keyframes slider{
-    0% {
-        background-image:url(images/1.jpg) ; 
-    }
-
-    20% {
-        background-image:url(images/1.jpg) ; 
-    }
-
-    25% {
-        background-image:url(images/2.jpg) ;  
-    }
-
-    45% {
-        background-image:url(images/2.jpg) ;  
-    }
-
-    50% {
-        background-image:url(images/3.jpg) ;  
-    }
-    70%{
-        background-image:url(images/3.jpg) ;  
-    }
-    75%{
-        background-image:url(images/4.jpg) ; 
-    }
-    95%{
-        background-image:url(images/4.jpg) ; 
-    }
-    100%{
-        background-image:url(images/1.jpg) ; 
-    }
 }
 /*Navigation*/
-#topnav{
+#navigation{
+    height: 90px;
     width: 100%;
-    height: 60px;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
     position: fixed;
-    top: 0%;
-    box-shadow: 0px 1px 10px black;
-    background-color: #fff;
+    top: -95px;
+    z-index: 3;
+    background-color: white;
+    transition: top 1s linear 0s;
+    box-shadow: 4px 0px 10px 4px black;
+}
+#nlogo{
     z-index: 2;
+    filter: saturate(1.5);
+    height: 70px;
+    margin-left: 50px;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255); 
+    justify-self: center; 
 }
-#logocover{
+#navul{
+    float: right;
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-#logocover img{
-    width: 200px;
-    height: 60px;
-    filter:saturate(1.5);
-}
-#topnavul{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-evenly;
-    align-items: center;
-    list-style: none;
-}
-.topnavli a{
-    text-decoration: none;
-    font-size: 1.4rem;
-    color:rgb(42, 140, 253) ;
-    text-shadow: 0.8px 0.8px 1px  black;
-}
-.topnavli a:hover{
-    color:rgb(0, 0, 0) ;
-    text-shadow: none;
-}
-.fa-bars{
-    color: rgb(42, 140, 253) ;  
-    margin-right:30px ;
-    display: none; 
-   
-  }
-  .fa-bars:hover{
-      color: rgb(0, 0, 0);
-      zoom: 1.1;   
-    }
- /*second navigation*/
-#secnav{
-    position: fixed;
-    top: 0;
-    width: 100%;
     height: 100%;
-    background-color:rgba(0, 0, 0, 0.842); 
+    align-items: center;
+    margin-right: 30px;
+}
+.navulli{
+    padding: 0px 20px;
+    list-style: none;
+}
+.navulli a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: rgb(3 136 43);
+    font-weight: bold;
+}
+.navulli a:hover{
+    color: rgb(0, 0, 0);
+}
+.navulli a h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#bars{
+    color: rgb(0, 114, 34); 
+    margin-right:30px ; 
+    display: none;
+}
+#bars:hover{
+    color: rgb(87, 34, 33);
+    zoom: 1.1;   
+}
+/*Secnav*/
+#secnav{
     z-index: 2;
+    width: 250px;
+    background-color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
+    position: fixed;
+    top: 90px;
+    bottom: 0;
+    transition: right 1s linear  0s;
 }
-.secnavli{
+#secnavul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.secnavulli{
+    width: 100%;
+    padding: 10px 0px;
     list-style: none;
-    padding: 15px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid rgb(197, 199, 67);
     text-align: center;
 }
-.secnavli a{
+.secnavulli a{
     text-decoration: none;
-    font-size: 1.4rem;
-    color:white ;  
+    font-size: 1.5rem;
+    color: rgb(3 136 43);
+    font-weight: bold;
 }
-.secnavli a:hover{
-    color:rgb(255, 152, 178) ;
+.secnavulli a:hover{
+    color: rgb(0, 0, 0);
 }
-#secnav h1{
-    font-size:1.5rem ;
+.secnavulli a h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/*section*/
+section{
+    width: 100%;
+    height: 100vh;
+}
+/*First*/
+#intro{
+background-image: url("tea.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-origin: border-box;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+#intro::after{
+    content: "";
+    background-color: rgba(255, 200, 50, 0.596);
     position: absolute;
-    left: 2%;
-    top: 1.5%;
-    color: rgb(255, 0, 119);
-    z-index: 15;
-    border-bottom: 2px solid rgb(255, 0, 119);
-    padding: 5px; 
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
 }
-.fa-times{
-    position: absolute;
-    right: 5%;
-    top: 4%;
-    color: white;
-    z-index: 15;
-    border: 2px solid white;
-    padding: 5px;
+#intro h3{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    z-index: 1;
+    margin-top: 10px;
 }
-.fa-times:hover{
-    color: rgb(255, 100, 100);
-    border: 2px solid rgb(255, 100, 100);
+#a1{
+    color:rgb(255, 38, 0);
 }
-/*Form*/
-#ask{
+#a3{
+    color:rgb(12, 110, 3);
+}
+#inlogo{
+    height: 200px;
+    z-index: 1;
+}
+#explorekey{
+    z-index: 1;
+    position:absolute;
+    bottom: 30px;
     display: flex;
     flex-direction: column;
-    position: relative;
-    width: 100%;
-    padding: 20px;
-    padding-top: 150px;
+    justify-content: center;
     align-items: center;
-    overflow: auto;
 }
-form h1{
-    color: #ffffff;
-    font-size: 2rem;
+#explorekey h5{
+    padding: 5px;
+    font-size: 1.5rem;
 }
-form h4{
-    color: #69fa41;
-    font-size: 1.3rem;
-    padding: 3px 0px;
+#key{
+    height: 40px;
+    width: 40px;
+    border:2px solid rgb(255, 255, 255) ;
+    border-radius: 50%;
+    background-color: rgba(6, 114, 72, 0.534);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-form div {
-    margin:10px 0px;
+#key:hover{
+    zoom: 1.05;
 }
-input{
-    border: none;
-    border-bottom: solid black 2px;
-    background: none;
-    outline: none;
+/*Second*/
+#introabout{
+    background-image: url("tea2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-origin: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
 }
-input::placeholder,textarea::placeholder{
-    color: #ffffff;
-    font-weight: bold;
-}
-svg{
-   width: 23.5px;
-   margin-bottom: 30px;;
-}
-textarea{
-    border: none;
-    border-bottom: solid black 2px;
-    background: none;
-    outline: none;
-    height: 50px;
-}
-#submit{
-    background: rgb(255, 255, 255);
-    padding: 3px 20px;
-    border-radius: 20px;
-    font-size: 1.3rem;
-}
-#contact{
-    text-decoration: none;
-    background-color: #ffffff;
+#introabout::after{
+        content: "";
+        background-color: rgba(0, 104, 47, 0.329);
+        position: absolute;
+        top: 100vh;
+        bottom: -100vh;
+        left: 0vh;
+        right: 0vh;
+ }
+ #introabout h1{
+    position: relative;
+    color: white;
+    font-size: 4rem;
+    z-index: 1;
     padding: 5px 20px;
-    color: rgb(42, 140, 253);
-    text-shadow: 0.8px 0.8px 1px  black;
-    border-radius: 30px;
-    font-size: 1.3rem;
+    border-radius: 10px;
+}
+#introabout h3{
+    position: relative;
+    color: white;
+    font-size: 2rem;
+    z-index: 1;
+    margin-top: 10px;
+}
+p{
+        color: antiquewhite;
+        font-size: 1.5rem;
+        padding: 0px 50px;
+        position: relative;
+        z-index: 1;
+        margin-top: 10px;
+        text-align: justify;
+}
+#aboutmore{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    z-index: 1;
+    margin-top: 10px;
     font-weight: bold;
-    margin: 5px 0px;
-    
-    box-shadow: 0px 2px 2px black;
+    background-color: rgb(87, 34, 33);
+    padding: 5px 15px;
+    border-radius: 20px;
+    box-shadow: 1.5px 1.5px 1px 1px rgb(0, 0, 0);
+}
+#aboutmore:hover{
+   zoom: 1.05;
+}
+/*Third*/
+#introfranchise{
+        background-image: url("tea3.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-origin: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+#introfranchise::after{
+    content: "";
+    background-color: rgba(179, 143, 23, 0.493);
+    position: absolute;
+    top: 200vh;
+    bottom: -200vh;
+    left: 0vh;
+    right: 0vh;
+}
+#frlogo{
+    height: 300px;
+    z-index: 1;
+}
+#introfranchise h3{
+    position: relative;
+    color: rgb(87, 34, 33);
+    font-size: 2rem;
+    z-index: 1;
+    margin-top: 20px;
+}
+#introfranchise h2{
+    position: relative;
+    color: rgb(0, 114, 34);
+    font-size: 3rem;
+    z-index: 1;
+    margin-top: 10px;
+    text-shadow: 1.5px 1.5px 2px black;
+}
+#franchisemore{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 15px;
+    z-index: 1;
+    font-weight: bold;
+    background-color: rgb(0, 114, 34);
+    padding: 5px 15px;
+    border-radius: 20px;
+    box-shadow: 1.5px 1.5px 1px 1px rgb(0, 0, 0);
+}
+#franchisemore:hover{
+   zoom: 1.05;
+}
+/*Footer*/
+footer{
+    height: 100px;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(30, 95, 50, 0.315);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:10px 0px;
+    border-top: 6px solid rgb(255, 255, 255);
+}
+footer h4{
+    font-size: 1.5rem;
+    color: rgb(10, 66, 114);
 }
 .social{
-    position: fixed;
-    top: 50px;
-    left: 2%;
-    display: flex;
-    flex-direction: column;
-    height: 190px;
-    justify-content: space-evenly;
+    position: relative;
+   text-align: center;
+   margin-top: 8px;
+   margin-bottom: 8px;
 }
 .social a i{
     height: 40px;
@@ -243,82 +319,126 @@ textarea{
     height: 42px;
     width: 42px;
 }
-/*footer*/
-footer{
-    width: 100vw;
-    height: 40px;
-    position:fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0px -1px 10px black;
-}
-footer h3{
-  color: rgb(42, 140, 253) ;
-  text-shadow: 0.8px 0.8px 1px  black;  
-}
-@media screen and (max-width: 1100px) {
-    #topnavul{
-        justify-content: flex-end;
+/*Media Query*/
+@media screen and (max-width:900px){
+    #inlogo, #frlogo{
+        height: 22vw;
+      }
+      #intro h3, #introabout h3, #introfranchise h3{
+        font-size: 3vw;
     }
-    .topnavli{
+    #introabout h1{
+        font-size: 5vw;
+    }
+    #introabout p{
+        font-size: 2.5vw;
+        padding: 0px 20px;
+    }
+    #introabout{
+        padding-top: 5vw;
+    }
+    #introfranchise h2{
+        margin-top: 5px;
+        font-size: 6vw;
+        text-shadow: 0.18vh 0.18vh 0.18vh black;
+    }
+    
+}
+@media screen and (max-width:750px){
+    #inlogo, #frlogo{
+      height: 25vw;
+    }
+    .navulli{
         display: none;
     }
-    .fa-bars{
+    #bars{
         display: block; 
-      } 
-   
-}
-@media screen and (max-width: 700px) {
-   
-    @keyframes slider{
-        0% {
-            background-image:url(images/1m.jpg) ; 
-        }
-    
-        20% {
-            background-image:url(images/1m.jpg) ; 
-        }
-    
-        25% {
-            background-image:url(images/2m.jpg) ;  
-        }
-    
-        45% {
-            background-image:url(images/2m.jpg) ;  
-        }
-    
-        50% {
-            background-image:url(images/3m.jpg) ;  
-        }
-        70%{
-            background-image:url(images/3m.jpg) ;  
-        }
-        75%{
-            background-image:url(images/4m.jpg) ; 
-        }
-        95%{
-            background-image:url(images/4m.jpg) ; 
-        }
-        100%{
-            background-image:url(images/1m.jpg) ; 
-        }
+    }
+    #intro h3, #introabout h3, #introfranchise h3{
+        font-size: 3.5vw;
+    }
+    #intro{
+        background-image: url(tea4.jpg);
+    }
+    #introabout h1{
+        font-size: 7vw;
+    }
+    #introabout p{
+        font-size: 3vw;
+        padding: 0px 10px;
+    }
+    #aboutmore, #franchisemore{
+        font-size: 3vw;
+        box-shadow: 1px 1px 1px 1px rgb(0, 0, 0);
+    }
+    #introfranchise h2{
+        font-size: 7vw;
+        text-shadow: 0.18vh 0.18vh 0.18vh black;
     }
 }
-@media screen and (max-width: 450px) {
-    form h1{
-        color: #ffffff;
-        font-size: 1.5rem;
+@media screen and (max-width:500px){
+    #inlogo, #frlogo{
+        height: 28vw;
+      }
+      #intro h3, #introabout h3, #introfranchise h3{
+          font-size: 4vw;
+      }
+      #introabout h1{
+        font-size: 7.5vw;
     }
-    form h4{
-        color: #69fa41;
-        font-size: 1.1rem;
-        padding: 3px 0px;
+    #introabout p{
+        font-size: 3.75vw;
+        padding: 0px 10px;
     }
-    .social{
-        left: 0.5%;
+    #aboutmore, #franchisemore{
+        font-size: 3.25vw;
+    }
+    #introfranchise h2{
+        font-size: 8vw;
+        text-shadow: 0.18vh 0.18vh 0.18vh black;
+    }
+}
+@media screen and (max-width:400px){
+    #nlogo{
+        margin-left: 10px;
+    }
+    #navul {
+        margin-right: 10px;
+    }
+    #intro h3 b{
+        display: block;
+    }
+    #inlogo, #frlogo{
+        height: 34vw;
+    }
+    #intro h3, #introabout h3, #introfranchise h3{
+          font-size: 4.9vw;
+    }
+    #introabout h1{
+        font-size: 8vw;
+    }
+    #introabout p{
+        font-size: 4.5vw;
+        padding: 0px 10px;
+    }
+    #aboutmore, #franchisemore{
+        font-size: 3.5vw;
+    }
+    #introfranchise h2{
+        font-size: 8.5vw;
+        text-shadow: 0.18vh 0.18vh 0.18vh black;
+    }
+}
+@media screen and (max-width:250px){
+
+    #introabout h1{
+        font-size: 7vw;
+    }
+    #introabout p{
+        font-size: 4.5vw;
+        padding: 0px 5px;
+    }
+    #aboutmore{
+       margin-top: 5px;
     }
 }

@@ -5,87 +5,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/all.min.css">
     <link rel="stylesheet" href="index.css">
-    <title>Nuwello Healthcare</title>
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <link rel="icon" href="android-chrome-512x512.png" type="image/png">
+    <title>Tea Kettle</title>
 </head>
 
 <body>
-    <!--navigation-->
-    <nav id="topnav">
-        <div id="logocover"> <img src="images/logo.png" alt="">
-        </div>
-        <ul id="topnavul">
-            <li class="topnavli" id="home"><a href="index.html">Home</a></li>
-            <li class="topnavli" id="about"><a href="more/Aboutus.html">About Us</a></li>
-            <li class="topnavli" id="division"><a href="more/Division.html">Division</a></li>
-            <li class="topnavli" id="vision"><a href="more/Vision.html">Vision</a></li>
-            <li class="topnavli" id="quality"><a href="more/Quality.html">Quality</a></li>
-            <i class="fas fa-bars fa-2x" onclick="secnavDisplay()"></i>
+    <nav id="navigation">
+        <img src="logo.png" alt="" id="nlogo">
+        <ul id="navul">
+            <li class="navulli"><a href="#">
+                    <h1>Tea Kettle</h1>
+                </a></li>
+            <li class="navulli"><a href="#">About us</a></li>
+            <li class="navulli"><a href="#">Franchise</a></li>
+            <li class="navulli"><a href="#">Contact</a></li>
+            <i class="fas fa-bars fa-2x" onclick="secnavDisplay()" id="bars"></i>
         </ul>
     </nav>
-    <!--Form-->
-    <form action="" id="ask">
-        <h4>Ask from</h4>
-        <h1>Nuwello Healthcare</h1>
-        <h4>Using</h4>
-        <div>
-            <label for="name"><i class="fas fa-user fa-lg"></i></label>
-            <input type="text" name="fullname" id="name" placeholder="Full Name">
+    <nav id="secnav" style="right: -250px;">
+        <ul id="secnavul">
+            <li class="secnavulli"><a href="#">
+                    <h1>Tea Kettle</h1>
+                </a></li>
+            <li class="secnavulli"><a href="#">About us</a></li>
+            <li class="secnavulli"><a href="#">Franchise</a></li>
+            <li class="secnavulli"><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="intro">
+        <img src="logo.png" alt="" id="inlogo">
+        <h3><b id="a1">Our Dream To</b><b id="a2"> Spread Our Self </b><b id="a3">In Whole World</b></h3>
+        <div id="explorekey">
+            <h5>Explore</h5>
+            <div id="key"><i class="fas fa-arrow-down"></i></div>
         </div>
-        <div>
-            <label for="phone"><i class="fas fa-mobile fa-lg"></i></label>
-            <input type="text" name="phone" id="phone" placeholder="Phone">
-        </div>
-        <div>
-            <label for="mail"><i class="fas fa-envelope fa-lg"></i></label>
-            <input type="email" name="mail" id="mail" placeholder="E-mail">
-        </div>
-        <div>
-            <label for="query"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" placeholder="">
-                    <path
-                        d="M256 31.1c-141.4 0-255.1 93.12-255.1 208c0 49.62 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734c1.249 3 4.021 4.766 7.271 4.766c66.25 0 115.1-31.76 140.6-51.39c32.63 12.25 69.02 19.39 107.4 19.39c141.4 0 255.1-93.13 255.1-207.1S397.4 31.1 256 31.1zM127.1 271.1c-17.75 0-32-14.25-32-31.1s14.25-32 32-32s32 14.25 32 32S145.7 271.1 127.1 271.1zM256 271.1c-17.75 0-31.1-14.25-31.1-31.1s14.25-32 31.1-32s31.1 14.25 31.1 32S273.8 271.1 256 271.1zM383.1 271.1c-17.75 0-32-14.25-32-31.1s14.25-32 32-32s32 14.25 32 32S401.7 271.1 383.1 271.1z" />
-                </svg></label>
-            <textarea name="query" id="query" placeholder="Query"></textarea>
-        </div>
-        <input type="submit" id="submit" value="Ask">
-        <h4>OR</h4>
-        <a href="more/Contactus.html" id="contact">Contact Us</a>
+    </section>
+    <section id="introabout">
+        <h3>Let's Introduce Ourself</h3>
+        <h1>About The Tea-Kettle</h1>
+        <p>The Tea-Kettle introduce itself in 2016, in food and beverage industry. The Tea-Kettle started as a tea cafe
+            and in few year became fastest growing tea cafe franchise in india. We have 10 outlets in 3 states in india.
+            We have multiple option for tea menu and provide best products to client. We are recognise for our low
+            investment to High-Returned buisness model. Our growth is a result of steady investment by management tea in
+            terms of times and resources. We learn and adopt unique techniques for growing time and resources. We learn
+            and adopt techniques for growing up and prepare for tea cafe room. <br> <br>We Welcome for the people who
+            wants
+            to grow with us. </p>
+        <h3>Know more</h3>
+        <a id="aboutmore" href="#">About Us</a>
+    </section>
+    <section id="introfranchise">
+        <img src="logo.png" alt="" id="frlogo">
+        <h3>Let's Talk About Our</h3>
+        <h2>Franchise Business</h2>
+        <a id="franchisemore" href="#">Franchise</a>
+    </section>
+    <footer>
+        <h4>Follow Us</h4>
         <div class="social">
-            <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin"
-                target="_blank"><i class="fab fa-instagram fa-lg" style="color: rgb(167, 14, 128); "></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-lg"
+                    style="color: rgb(192, 1, 160); "></i></a>
             <a href="https://www.facebook.com/login.php" target="_blank"><i class="fab fa-facebook fa-lg"
                     style="color: rgb(58, 85, 175);"></i></a>
             <a href="https://mobile.twitter.com/i/flow/login" target="_blank"><i class="fab fa-twitter fa-lg"
                     style="color: rgb(22, 170, 207);"></i></a>
         </div>
-
-    </form>
-    <!--Footer-->
-    <footer>
-        <h3>&copy; Nuwello Healthcare Pvt Ltd</h3>
     </footer>
-    <!--Secnav-->
-    <aside id="secnav" style="display: none;">
-        <h1>Nuwello <br> Healthcare</h1>
-        <i class="fas fa-times fa-lg" onclick="secnavDisplay()"></i>
-        <ul id="secnavul">
-            <li class="secnavli" id="home"><a href="index.html">Home</a></li>
-            <li class="secnavli" id="about"><a href="more/Aboutus.html">About Us</a></li>
-            <li class="secnavli" id="division"><a href="more/Division.html">Division</a></li>
-            <li class="secnavli" id="vision"><a href="more/Vision.html">Vision</a></li>
-            <li class="secnavli" id="quality"><a href="more/Quality.html">Quality</a></li>
-        </ul>
-    </aside>
-    <!--Background Slider-->
-
+    <!--Script portion-->
     <script>
-        function secnavDisplay() {
-            let secnav = document.getElementById('secnav');
-            if (secnav.style.display != 'none') {
-                secnav.style.display = 'none';
-            } else {
-                secnav.style.display = 'flex';
+
+        window.onscroll = function () {
+            scroll()
+        };
+
+        function scroll() {
+            if (document.body.scrollTop > 25 ||
+                document.documentElement.scrollTop > 25) {
+                document.getElementById("navigation").style.top = "0";
+                document.getElementById("explorekey").style.display = "none";
+            }
+            else {
+                document.getElementById("navigation").style.top = "-95px";
+                document.getElementById("explorekey").style.display = "flex";
+            }
+            function secnavDisplay() {
+                let secnav = document.getElementById('secnav');
+                if (secnav.style.right != '0') {
+                    secnav.style.right = '0';
+                } else {
+                    secnav.style.right = '-250px';
+                }
+            }
+            function scrollDown() {
+                let secnav = document.getElementById('secnav');
+                if (secnav.style.right != '0') {
+                    secnav.style.right = '0';
+                } else {
+                    secnav.style.right = '-250px';
+                }
             }
         }
     </script>

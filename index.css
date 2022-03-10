@@ -13,7 +13,7 @@ body{
     height: 100vh;
     width: 100vw;
 }
-#intro::after{
+body::after{
     content: "";
     background-color: rgba(179, 143, 23, 0.4);
     position: fixed;
@@ -126,10 +126,11 @@ section{
     max-height:fit-content;
     overflow: hidden;
     padding: 10px 0px;
+    z-index: 1;
 }
 /*First*/
 #intro{
-background-image: url("tea.jpg");
+background-image: url("images/tea.jpg");
 background-repeat: no-repeat;
 background-position: fixed;
 background-size: cover;
@@ -159,17 +160,18 @@ overflow: hidden;
 #explorekey{
     z-index: 1;
     position:absolute;
+    left: 10vw;
     bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#explorekey h5{
+#explorekey h5,#callkey h5{
     padding: 5px;
     font-size: 1.5rem;
 }
-#key{
+#key,#call{
     height: 40px;
     width: 40px;
     border:4px solid rgb(255, 255, 255) ;
@@ -180,12 +182,25 @@ overflow: hidden;
     justify-content: center;
     align-items: center;
 }
-#key:hover{
+#key:hover,#call:hover{
     zoom: 1.05;
+}
+#callkey{
+    z-index: 1;
+    position:absolute;
+    right: 10vw;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#call{
+    background-color: rgb(255, 255, 255);
 }
 /*Second*/
 #introabout{
-    background-image: url("tea2.jpg");
+    background-image: url("images/tea2.jpg");
     background-repeat: no-repeat;
     background-position: fixed;
     background-size: cover;
@@ -238,7 +253,7 @@ overflow: hidden;
 }
 /*Third*/
 #introfranchise{
-        background-image: url("tea3.jpg");
+        background-image: url("images/tea3.jpg");
         background-repeat: no-repeat;
         background-position: fixed;
         background-size: cover;
@@ -322,7 +337,7 @@ footer h4{
 }
 /*--------------------------------------------About us page-------------------------------------------*/
 #about{
-    background-image: url("tea5.jpg");
+    background-image: url("images/tea5.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -371,7 +386,7 @@ footer h4{
 }
 /*--------------------------------------------Franchise page-------------------------------------------*/
 #franchise{
-    background-image: url("tea6.jpg");
+    background-image: url("images/tea6.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -454,6 +469,59 @@ footer h4{
     z-index: 1;
     width: 50vw;
 }
+/*--------------------------------------------Contact page-------------------------------------------*/
+#contact{
+    background-image: url("images/tea12.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-y: auto;
+}
+#contact::after{
+        content: "";
+        background-color: rgba(0, 78, 102, 0.621);
+        background-attachment: fixed;
+        position: fixed;
+        top: 0vh;
+        bottom: 0vh;
+        left: 0vh;
+        right: 0vh;
+ }
+ #contact section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    overflow-x: hidden;
+    width: 100%;
+    height:fit-content;
+    z-index: 1;
+    position: relative;
+}
+#contact p{
+    font-size: 2rem;
+    color: aliceblue;
+    width: 80vw;
+    margin-top: 20px;
+}
+#contact h3{
+    font-size: 2.5rem;
+    color: rgb(255, 199, 79);
+    border-bottom: 2px solid rgb(255, 199, 79);
+    padding-top: 10px;
+}
+#contact h2{
+    font-size: 3rem;
+    color: rgb(32, 248, 255);
+    border-bottom: 2px solid rgb(32, 248, 255);
+    padding-top: 10px;
+}
+#contact h4{
+    font-size: 2.25rem;
+    color: rgb(240, 255, 29);
+    border-bottom: 2px solid rgb(240, 255, 29);
+    padding-top: 10px;
+}
 
 /*----------------------------------------------Media Query----------------------------------------------------*/
 
@@ -489,7 +557,7 @@ footer h4{
     }
     /*--------------------------------------------Franchise page-------------------------------------------*/
     #franchise{
-        background-image: url("tea7.jpg");
+        background-image: url("images/tea7.jpg");
     }
     #franchise h2{
         font-size: 5vw;
@@ -515,7 +583,7 @@ footer h4{
         display: block; 
     }
     #intro{
-        background-image: url(tea4.jpg);
+        background-image: url(images/tea4.jpg);
     }
     #introabout p{
         font-size: 3.5vw;
@@ -549,6 +617,10 @@ footer h4{
     #franchise .files{
         width: 70vw;
     }
+    /*--------------------------------------------Contact page-------------------------------------------*/
+ #contact{
+    background-image: url("images/tea13.jpg");
+}
 }
 @media screen and (max-width:500px){
     #inlogo{
@@ -591,7 +663,7 @@ footer h4{
     }
     /*--------------------------------------------Franchise page-------------------------------------------*/
     #franchise{
-        background-image: url("tea8.jpg");
+        background-image: url("images/tea8.jpg");
     }
     #franchise h2{
         font-size: 7vw;
@@ -611,6 +683,19 @@ footer h4{
     #franchise .files{
         width: 95vw;
     }
+    /*--------------------------------------------Contact page-------------------------------------------*/
+#contact p{
+    font-size: 6vw;
+}
+#contact h3{
+    font-size: 7vw;
+}
+#contact h2{
+    font-size: 8vw;
+}
+#contact h4{
+    font-size: 6.75vw;
+}
 }
 @media screen and (max-width:400px){
     #nlogo{
@@ -670,14 +755,14 @@ footer h4{
     #aboutmore{
        margin-top: 5px;
     }
-    #explorekey{
+    #explorekey, #callkey{
         bottom: 5px;
     }
-    #explorekey h5{
+    #explorekey h5 ,#callkey h5{
         padding: 5px;
         font-size: 1rem;
     }
-    #key{
+    #key, #call{
         height: 30px;
         width: 30px;
     }
@@ -685,16 +770,24 @@ footer h4{
 
 /*-----------for landscape mode-------------*/
 @media screen and (max-height:530px){
-    #explorekey{
+    #explorekey,#callkey{
         bottom: 5px;
         flex-direction: row;
     }
-    #explorekey h5{
+    #explorekey h5,#callkey h5{
         padding: 5px;
         font-size: 1rem;
     }
-    #key{
+    #key,#call{
         height: 30px;
         width: 30px;
     }
+}
+@media screen and (max-height:380px){
+#secnavul{
+    margin-top: 5px;
+}
+.secnavulli{
+    padding: 5px 0px;
+}
 }

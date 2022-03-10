@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" type="text/css" href="/css/all.min.css">
+    <title>Tea Kettle</title>
+</head>
+
+<body id="contact">
+    <nav id="navigation" style="top: 0;">
+        <img src="/images/logo.png" alt="" id="nlogo">
+        <ul id="navul">
+            <li class="navulli"><a href="/index.html">
+                    <h1>Tea Kettle</h1>
+                </a></li>
+            <li class="navulli"><a href="aboutus.html">About us</a></li>
+            <li class="navulli"><a href="franchise.html">Franchise</a></li>
+            <li class="navulli"><a href="contact.html">Contact</a></li>
+            <i class="fas fa-bars fa-2x" onclick="secnavDisplay()" id="bars"></i>
+        </ul>
+    </nav>
+    <aside id="secnav" style="right: -250px;">
+        <ul id="secnavul">
+            <li class="secnavulli"><a href="/index.html">
+                    <h1>Tea Kettle</h1>
+                </a></li>
+            <li class="secnavulli"><a href="aboutus.html">About us</a></li>
+            <li class="secnavulli"><a href="franchise.html">Franchise</a></li>
+            <li class="secnavulli"><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="social" id="secsocial">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-lg"
+                    style="color: rgb(192, 1, 160); "></i></a>
+            <a href="https://www.facebook.com/login.php" target="_blank"><i class="fab fa-facebook fa-lg"
+                    style="color: rgb(58, 85, 175);"></i></a>
+            <a href="contact.html" target=""><i class="fas fa-phone fa-lg" style="color: rgb(1, 128, 160);"></i></a>
+        </div>
+    </aside>
+    <section>
+        <p>We are availavle 24x7 to answer all your querries and your suggestions are very important for us to improve
+            our work and system so you can get its benefits more efficiently. </p>
+        <h3>stay in touch with</h3>
+        <h2>tea-kettle</h2>
+        <h3>call at</h3>
+        <h4>+91 9630266972</h4>
+        <h3>mail at</h3>
+        <h4>teakettleenquiry@gmail.com</h4>
+        <h3>follow us</h3>
+        <div class="social">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-lg"
+                    style="color: rgb(192, 1, 160); "></i></a>
+            <a href="https://www.facebook.com/login.php" target="_blank"><i class="fab fa-facebook fa-lg"
+                    style="color: rgb(58, 85, 175);"></i></a>
+        </div>
+    </section>
+    <footer>
+        <h4>Follow Us</h4>
+        <div class="social">
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-lg"
+                    style="color: rgb(192, 1, 160); "></i></a>
+            <a href="https://www.facebook.com/login.php" target="_blank"><i class="fab fa-facebook fa-lg"
+                    style="color: rgb(58, 85, 175);"></i></a>
+            <a href="contact.html" target=""><i class="fas fa-phone fa-lg" style="color: rgb(1, 128, 160);"></i></a>
+        </div>
+    </footer>
+    <!--Script portion-->
+    <script>
+        function secnavDisplay() {
+            if (document.getElementById('secnav').style.right != "-250px") {
+                document.getElementById('secnav').style.right = "-250px";
+            } else {
+                document.getElementById('secnav').style.right = "0px";
+            }
+        }
+    </script>
+</body>
+
+</html>

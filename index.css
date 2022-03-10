@@ -474,6 +474,7 @@ footer h4{
     background-image: url("images/tea12.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
     background-attachment: fixed;
     overflow-y: auto;
 }

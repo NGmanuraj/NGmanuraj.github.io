@@ -23,7 +23,7 @@
 }
 
 @media screen and (max-width:900px){
-    #introabout h3, #introfranchise h3{
+    #introabout h3, #introfranchise h3,#aboutsec1 h3,#contactsec1 h3,#franchisesec1 h3{
         font-size: 4.2vw;
     }
     #introabout h1{
@@ -70,7 +70,7 @@
     #bars{
         display: block; 
     }
-    #introabout h3, #introfranchise h3{
+    #introabout h3, #introfranchise h3,#aboutsec1 h3,#contactsec1 h3,#franchisesec1 h3{
         font-size: 4.8vw;
     }
     #introabout h1{
@@ -164,7 +164,10 @@
     }
     #intro h1{
         font-size: 12vw;
-        margin-top: 60px;
+        margin-top: 60px; 
+    }
+    #aboutsec1 h1,#contactsec1 h1,#franchisesec1 h1{
+        font-size: 12vw;
     }
     #intro h4{
         margin-top: 30px;
@@ -183,11 +186,10 @@
 
 }
 @media screen and (max-width:500px){
-    #intro h1{
+    #intro h1,#aboutsec1 h1,#contactsec1 h1,#franchisesec1 h1{
         font-size: 12vw;
-        margin-top: 60px;
     }
-    #intro h3{
+    #intro h3,#aboutsec1 h3,#contactsec1 h3,#franchisesec1 h3{
         font-size: 8vw;
         width: 100vw;
     }
@@ -270,7 +272,7 @@
     #frlogo{
         height: 38vw;
     }
-    #introabout h3, #introfranchise h3{
+    #introabout h3, #introfranchise h3,#aboutsec1 h3,#contactsec1 h3,#franchisesec1 h3{
           font-size: 6.4vw;
     }
     #introabout h1{

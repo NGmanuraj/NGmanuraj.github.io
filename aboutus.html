@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,11 +48,11 @@
         <h1>About Us</h1>
     </section>
     <section id="aboutsec2">
-        <h3>The Origin</h3>
-        <div class="balls"></div>
+        <h3 data-aos="fade-down">The Origin</h3>
+        <div class="balls" data-aos="fade-up"></div>
         <div class="container">
             <div>
-                <p>
+                <p data-aos="fade-right">
                     In India Tea is not just a hot piping drinks, its an emotion, gossip,
                     conversation, bond beginning and a lot more. With the growing
                     number of tea rooms in India. it’s needless to say that the kind
@@ -64,15 +65,15 @@
                     delectable food across the globe. “At Tea-Kettle” we serve the
                     passion with our Profession, to satisfy Every taste palate of
                     the Country.</p>
-                <img src="images/abimg2.jpg" alt="">
+                <img src="images/abimg2.jpg" alt="" data-aos="fade-left">
             </div>
         </div>
-            <h3>The scope</h3>
-            <div class="balls"></div>
+            <h3 data-aos="fade-down">The scope</h3>
+            <div class="balls" data-aos="fade-up"></div>
             <div class="container" id="container2">
                 <div>
-                    <img src="images/abimg3.jpg" alt="">
-                    <p>
+                    <img src="images/abimg3.jpg" alt="" data-aos="fade-right">
+                    <p data-aos="fade-left">
                         History suggest that tea-drinking commenced around 750 BC, but
                         the origin of tea in India, in terms of commercialisation, goes back
                         to the pre-independence years, when the British initiated tea
@@ -91,14 +92,14 @@
             </div>
     </section>
     <footer>
-        <h1>Visit The Tea Factory</h1>
-        <div class="balls"></div>
-        <h4>Call Us:</h4>
-        <h4>8871753465</h4>
-        <h4>Email:</h4>
-        <h4>teakettleenquiry@gmail.com</h4>
-        <h4>Follow Us</h4>
-        <div class="social">
+        <h1 data-aos="slide-left">Visit The Tea Factory</h1>
+        <div class="balls" data-aos="slide-left"></div>
+        <h4 data-aos="slide-right">Call Us:</h4>
+        <h4 data-aos="slide-left">8871753465</h4>
+        <h4 data-aos="slide-right">Email:</h4>
+        <h4 data-aos="slide-left">teakettleenquiry@gmail.com</h4>
+        <h4 data-aos="slide-right">Follow Us</h4>
+        <div class="social" data-aos="slide-left">
             <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-lg"
                     style="color: rgb(192, 1, 160); "></i></a>
             <a href="https://www.facebook.com/login.php" target="_blank"><i class="fab fa-facebook fa-lg"
@@ -106,6 +107,14 @@
         </div>
     </footer>
         <!--Script portion-->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init( {
+            offset:150,
+            duration:700,
+            once: false,
+        });
+    </script>
         <script>
             function secnavDisplay() {
                 if (document.getElementById('secnav').style.right != "-250px") {

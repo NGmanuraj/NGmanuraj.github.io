@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,12 +56,12 @@
         </div>
     </section>
     <section id="introabout">
-        <h3>Let's Introduce Ourself</h3>
-        <h1>About The Tea-Kettle</h1>
-        <div class="balls"></div>
+        <h3 data-aos="slide-down">Let's Introduce Ourself</h3>
+        <h1 data-aos="slide-up">About The Tea-Kettle</h1>
+        <div class="balls" data-aos="slide-up"></div>
         <div class="container">
             <div>
-                <p>The Tea-Kettle introduce itself in 2016, in food and beverage industry. The Tea-Kettle started as a
+                <p data-aos="zoom-in-right">The Tea-Kettle introduce itself in 2016, in food and beverage industry. The Tea-Kettle started as a
                     tea cafe and in few year became fastest growing tea cafe franchise in india. We have 10 outlets in 3
                     states in
                     india. We have multiple option for tea menu and provide best products to client. We are recognise
@@ -72,17 +73,17 @@
                     the
                     people who wantsto grow with us.
                 </p>
-                <img src="images/kulhad.jpg" alt="">
+                <img src="images/kulhad.jpg" alt="" data-aos="zoom-in-left">
             </div>
-            <h3>Know more</h3>
-            <a id="aboutmore" href="aboutus.html">About Us</a>
+            <h3  data-aos="zoom-in-down">Know more</h3>
+            <a id="aboutmore" href="aboutus.html"  data-aos="zoom-in-up">About Us</a>
         </div>
 
     </section>
     <section id="introextra">
-        <h3>Look Around</h3>
+        <h3 data-aos="zoom-in-down">Look Around</h3>
         <div class="balls"></div>
-        <div class="slider">
+        <div class="slider" data-aos="zoom-in">
             <figure>
                 <img src="images/slider1.jpeg" alt="">
                 <img src="images/slider2.jpeg" alt="">
@@ -91,9 +92,9 @@
                 <img src="images/slider1.jpeg" alt="">
             </figure>
         </div>
-        <h3>Tea's & More</h3>
+        <h3 data-aos="zoom-in-down">Tea's & More</h3>
         <div class="balls"></div>
-        <div class="slider">
+        <div class="slider" data-aos="zoom-in">
             <figure>
                 <img src="images/slider5.jpg" alt="">
                 <img src="images/slider6.jpg" alt="">
@@ -104,20 +105,20 @@
         </div>
     </section>
     <section id="introfranchise">
-        <img src="images/logo.png" alt="" id="frlogo">
-        <h3>Let's Talk About Our</h3>
-        <h2>Franchise Business</h2>
-        <a id="franchisemore" href="franchise.html">Franchise</a>
+        <img src="images/logo.png" alt="" id="frlogo" data-aos="slide-down">
+        <h3 data-aos="slide-left">Let's Talk About Our</h3>
+        <h2 data-aos="slide-right">Franchise Business</h2>
+        <a id="franchisemore" href="franchise.html" data-aos="slide-up">Franchise</a>
     </section>
     <footer>
-        <h1>Visit The Tea Factory</h1>
-        <div class="balls"></div>
-        <h4>Call Us:</h4>
-        <h4>8871753465</h4>
-        <h4>Email:</h4>
-        <h4>teakettleenquiry@gmail.com</h4>
-        <h4>Follow Us</h4>
-        <div class="social">
+        <h1 data-aos="slide-left">Visit The Tea Factory</h1>
+        <div class="balls" data-aos="slide-left"></div>
+        <h4 data-aos="slide-right">Call Us:</h4>
+        <h4 data-aos="slide-left">8871753465</h4>
+        <h4 data-aos="slide-right">Email:</h4>
+        <h4 data-aos="slide-left">teakettleenquiry@gmail.com</h4>
+        <h4 data-aos="slide-right">Follow Us</h4>
+        <div class="social" data-aos="slide-left">
             <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-lg"
                     style="color: rgb(192, 1, 160); "></i></a>
             <a href="https://www.facebook.com/login.php" target="_blank"><i class="fab fa-facebook fa-lg"
@@ -125,8 +126,15 @@
         </div>
     </footer>
     <!--Script portion-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-
+        AOS.init( {
+            offset:150,
+            duration:700,
+            once: false,
+        });
+    </script>
+    <script>
         window.onscroll = function () {
             scroll()
         };

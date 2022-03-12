@@ -25,7 +25,7 @@ body{
     top: -95px;
     z-index: 3;
     background-color: var(--color3);
-    transition: top 1s linear 0s;
+    transition: top 0.25s linear 0s;
     box-shadow: 4px 0px 10px 4px black;
 }
 #nlogo{
@@ -81,7 +81,7 @@ body{
     position: fixed;
     top: 90px;
     bottom: 0;
-    transition: right 0.25s linear  0s;
+    transition: right 0.2s linear  0s;
     box-shadow: 0px -2px 8px 1px rgba(0, 0, 0, 0.726);
 }
 #secnavul{
@@ -123,6 +123,8 @@ body{
 }
 /*First*/
 #intro{
+background-image: linear-gradient(rgba(0, 0, 0, 0.671),
+             rgba(0, 0, 0, 0.664)), url("images/tbg1.jpg");
 background-repeat: no-repeat;
 background-position: fixed;
 background-size: cover;
@@ -134,46 +136,46 @@ justify-content: center;
 overflow: hidden;
 animation: slider 12s infinite;
 }
-#intro::after{
-    content: "";
-    background: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 0vh;
-    bottom: 0vh;
-    left: 0vh;
-    right: 0vh;
-}
 @keyframes slider{
     0% {
-        background-image:url(images/tbg1.jpg) ; 
+        background-image:linear-gradient(rgba(0, 0, 0, 0.671),
+        rgba(0, 0, 0, 0.664)), url("images/tbg1.jpg") ; 
     }
 
     20% {
-        background-image:url(images/tbg1.jpg) ; 
+        background-image:linear-gradient(rgba(0, 0, 0, 0.671),
+        rgba(0, 0, 0, 0.664)), url("images/tbg1.jpg") ; 
     }
 
     25% {
-        background-image:url(images/tbg2.jpg) ;  
+        background-image:linear-gradient(rgba(0, 0, 0, 0.671),
+             rgba(0, 0, 0, 0.664)), url("images/tbg2.jpg") ;  
     }
 
     45% {
-        background-image:url(images/tbg2.jpg) ;  
+        background-image:linear-gradient(rgba(0, 0, 0, 0.671),
+             rgba(0, 0, 0, 0.664)), url("images/tbg2.jpg") ;  
     }
 
     50% {
-        background-image:url(images/tbg3.jpg) ;  
+        background-image:linear-gradient(rgba(0, 0, 0, 0.671),
+             rgba(0, 0, 0, 0.664)), url("images/tbg3.jpg") ;  
     }
     70%{
-        background-image:url(images/tbg3.jpg) ;  
+        background-image:linear-gradient(rgba(0, 0, 0, 0.671),
+             rgba(0, 0, 0, 0.664)), url("images/tbg3.jpg") ;  
     }
     75%{
-        background-image:url(images/tbg4.jpg) ; 
+        background-image:linear-gradient(rgba(0, 0, 0, 0.671),
+             rgba(0, 0, 0, 0.664)), url("images/tbg4.jpg") ; 
     }
     95%{
-        background-image:url(images/tbg4.jpg) ; 
+        background-image:linear-gradient(rgba(0, 0, 0, 0.671),
+             rgba(0, 0, 0, 0.664)), url("images/tbg4.jpg") ; 
     }
     100%{
-        background-image:url(images/tbg1.jpg) ; 
+        background-image:linear-gradient(rgba(0, 0, 0, 0.671),
+             rgba(0, 0, 0, 0.664)), url("images/tbg1.jpg") ; 
     }
 }
 #intro h1{
@@ -644,6 +646,8 @@ footer .balls{
     overflow-y: auto;
 }
 #franchisesec1{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.671),
+        rgba(0, 0, 0, 0.664)), url("images/fr1.jpg");
     background-repeat: no-repeat;
     background-position: fixed;
     background-size: cover;
@@ -796,7 +800,7 @@ footer .balls{
 }
 #contactsec1{
     background-image: linear-gradient(rgba(0, 0, 0, 0.671),
-             rgba(0, 0, 0, 0.664)), url("images/tbg1.jpg");
+             rgba(0, 0, 0, 0.664)), url("images/tea12.jpg");
     background-repeat: no-repeat;
     background-position: fixed;
     background-size: cover;

@@ -116,6 +116,10 @@
     /*--------------------------------------------Contact page-------------------------------------------*/
 }
 @media screen and (max-width:600px){
+    #intro{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.671),
+                     rgba(0, 0, 0, 0.664)), url("images/tbg5.jpg");
+    }
     @keyframes slider{
         0% {
             background-image:url(images/tbg5.jpg) ; 

@@ -14,7 +14,7 @@
 }
 body{
     height: 100vh;
-    width: 100vw;
+    width: 100%;
    overflow-x: hidden;
 }
 /*Navigation*/
@@ -339,7 +339,7 @@ animation: slider 12s infinite;
         font-size: 1.5rem;
         padding: 20px 8vw 0px 0px;
         position: relative;
-        text-align: justify;
+        text-align:justify;
 }
 #introabout .container img{
     width: 400px;
@@ -734,7 +734,8 @@ footer .balls{
     padding-top: 10px;
     overflow-x: hidden;
     width: 100%;
-    height:fit-content;
+    min-height: 100vh;
+    max-height:fit-content;
 }
 #franchise h2{
     position: relative;
@@ -857,21 +858,23 @@ footer .balls{
 }
 #contact p{
     font-size: 2rem;
-    color: rgb(5, 107, 196);
+    color: var(--color1);
     width: 80vw;
     margin-top: 20px;
     text-align: center;
 }
 #contact h3{
     font-size: 2.5rem;
-    color: rgb(228, 156, 0);
-    border-bottom: 2px solid rgb(228, 156, 0);
+    color: rgb(255, 208, 0);
+    border-bottom: 2px dotted rgb(255, 208, 0);
     padding-top: 10px;
 }
 #contact h2{
     font-size: 3rem;
     color: rgb(32, 136, 255);
+    font-weight: bolder;
     border-bottom: 2px solid rgb(32, 136, 255);
+   
     padding-top: 10px;
 }
 #contact h4{

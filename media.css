@@ -381,4 +381,7 @@
 .secnavulli{
     padding: 5px 0px;
 }
+#secnav .social{
+    display: none;
+}
 }

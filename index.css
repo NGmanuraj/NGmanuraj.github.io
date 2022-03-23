@@ -15,7 +15,6 @@
 body{
     height: 100vh;
     width: 100vw;
-    overflow-x: hidden;
 }
 /*Navigation*/
 #navigation{
@@ -113,6 +112,41 @@ body{
 .secnavulli a h1{
     font-size: 1.5rem;
     font-weight: bold;
+}
+/*Whatsapp button*/
+#whatsappkey{
+    z-index: 2;
+    position:fixed;
+    right: 6vw;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#whatsapp{
+    background-color: rgb(255, 255, 255);
+}
+#whatsappkey h5{
+    padding: 1px 5px;
+    margin-bottom: 5px;
+    font-size: 1.25rem;
+    border-radius:5px ;
+    color:rgb(255, 255, 255);
+    background: rgb(27, 31, 255);
+}
+#whatsapp{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: rgb(79, 206, 93);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#whatsapp:hover{
+    zoom: 1.05;
 }
 /*section*/
 #index section{
@@ -253,19 +287,19 @@ animation: slider 12s infinite;
 #explorekey{
     z-index: 1;
     position:absolute;
-    left: 10vw;
+    left: 6vw;
     bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#explorekey h5,#callkey h5{
+#explorekey h5{
     padding: 5px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: aliceblue;
 }
-#key,#call{
+#key{
     height: 40px;
     width: 40px;
     border:4px solid rgb(255, 255, 255) ;
@@ -276,22 +310,10 @@ animation: slider 12s infinite;
     justify-content: center;
     align-items: center;
 }
-#key:hover,#call:hover{
+#key:hover{
     zoom: 1.05;
 }
-#callkey{
-    z-index: 1;
-    position:absolute;
-    right: 10vw;
-    bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#call{
-    background-color: rgb(255, 255, 255);
-}
+
 /*Second*/
 #introabout{
     width: 100%;
@@ -887,7 +909,6 @@ footer .balls{
 #contact h4{
     font-size: 2.25rem;
     color: rgb(255, 29, 29);
-    border-bottom: 2px solid rgb(255, 29, 29);
     padding-top: 10px;
 }
 

@@ -332,23 +332,28 @@
     #aboutmore{
        margin-top: 5px;
     }
-    #explorekey, #callkey{
+   #whatsappkey{
         bottom: 5px;
+        right: 0px;
     }
-    #explorekey h5 ,#callkey h5{
+    #explorekey{
+        bottom: 5px;
+        left: 0px;
+    }
+    #explorekey h5 ,#whatsappkey h5{
         padding: 5px;
         font-size: 1rem;
     }
-    #key, #call{
+    #key, #whatsapp{
         height: 30px;
         width: 30px;
     }
      /*--------------------------------------------About us page-------------------------------------------*/
     #aboutsec1 h1, #franchisesec1 h1,#contactsec1{
-            font-size: 22vw;
+            font-size: 20vw;
     }
     #aboutsec1 h3,#aboutsec2 h3, #franchisesec1 h3{
-        font-size: 14vw;
+        font-size: 12vw;
     }
     #aboutsec2 .container p {
         font-size: 6vw;
@@ -358,23 +363,25 @@
 
 /*-----------for landscape mode-------------*/
 @media screen and (max-height:545px){
-    #explorekey,#callkey{
+    #explorekey,#whatsappkey{
         bottom: 5px;
         flex-direction: row;
     }
-    #explorekey h5,#callkey h5{
+    #explorekey h5,#whatsappkey h5{
         padding: 5px;
         font-size: 1rem;
+        margin-right:1vw;
     }
-    #key,#call{
+    #key,#whatsapp{
         height: 30px;
         width: 30px;
     }
     #intro h3{
         top: 5vh;
     }
+
 }
-@media screen and (max-height:380px){
+@media screen and (max-height:385px){
 #secnavul{
     margin-top: 5px;
 }
@@ -383,5 +390,22 @@
 }
 #secnav .social{
     display: none;
+}
+#index section{
+    width: 100%;
+    min-height: 100%;
+    max-height:fit-content;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 1;
+}
+#intro h1{
+    font-size: 15vh;
+}
+#intro h3{
+    font-size: 8vh;
+}
+#intro h4{
+    font-size: 5vh;
 }
 }

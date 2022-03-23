@@ -22,7 +22,7 @@ body{
     width: 100%;
     position: fixed;
     top: -95px;
-    z-index: 3;
+    z-index: 4;
     background-color: var(--color3);
     transition: top 0.25s linear 0s;
     box-shadow: 4px 0px 10px 4px black;
@@ -73,7 +73,7 @@ body{
 }
 /*Secnav*/
 #secnav{
-    z-index: 2;
+    z-index: 3;
     width: 220px;
     background-color: var(--color3);
     justify-content: center;
@@ -115,7 +115,7 @@ body{
 }
 /*Whatsapp button*/
 #whatsappkey{
-    z-index: 1;
+    z-index: 2;
     position:fixed;
     right: 6vw;
     bottom: 30px;

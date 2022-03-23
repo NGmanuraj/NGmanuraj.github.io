@@ -115,7 +115,7 @@ body{
 }
 /*Whatsapp button*/
 #whatsappkey{
-    z-index: 2;
+    z-index: 1;
     position:fixed;
     right: 6vw;
     bottom: 30px;

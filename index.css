@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
 *{
     margin: 0%;
     padding: 0%;
@@ -10,7 +10,7 @@
     --color2 :rgb(87, 34, 33);
     --color3 :rgb(255, 245, 199);
     --color4 :rgb(255, 241, 51);
-    --font1:'Smooch', cursive;
+    --font1:'Square Peg', cursive;
 }
 body{
     height: 100vh;
@@ -49,7 +49,7 @@ body{
 }
 .navulli a{
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--color1);
     font-weight: bold;
 }
@@ -160,7 +160,7 @@ body{
 /*First*/
 #intro{
 background-image: linear-gradient(rgba(0, 0, 0, 0.671),
-             rgba(0, 0, 0, 0.664)), url("images/tbg1.jpg");
+             rgba(0, 0, 0, 0.664)), url("images/tbg1.jpeg");
 background-repeat: no-repeat;
 background-position: fixed;
 background-size: cover;
@@ -170,18 +170,17 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-overflow: hidden;
 animation: slider 12s infinite;
 }
 @keyframes slider{
     0% {
         background-image:linear-gradient(rgba(0, 0, 0, 0.671),
-        rgba(0, 0, 0, 0.664)), url("images/tbg1.jpg") ; 
+        rgba(0, 0, 0, 0.664)), url("images/tbg1.jpeg") ; 
     }
 
     20% {
         background-image:linear-gradient(rgba(0, 0, 0, 0.671),
-        rgba(0, 0, 0, 0.664)), url("images/tbg1.jpg") ; 
+        rgba(0, 0, 0, 0.664)), url("images/tbg1.jpeg") ; 
     }
 
     25% {
@@ -212,18 +211,18 @@ animation: slider 12s infinite;
     }
     100%{
         background-image:linear-gradient(rgba(0, 0, 0, 0.671),
-             rgba(0, 0, 0, 0.664)), url("images/tbg1.jpg") ; 
+             rgba(0, 0, 0, 0.664)), url("images/tbg1.jpeg") ; 
     }
 }
 #intro h1{
     position: relative;
     color: rgb(255, 255, 255);
-    font-size: 4rem;
+    font-size: 3.5rem;
     z-index: 1;
     padding:10px 10px ;
-    border-top:4px solid rgb(255, 103, 32) ;
-    border-bottom:4px solid rgb(16, 150, 4);
-    border-radius: 10px;
+    border-top:3.5px solid rgb(255, 103, 32) ;
+    border-bottom:3.5px solid rgb(16, 150, 4);
+    border-radius: 8px;
     animation: head 2s cubic-bezier(0.175, 0.885, 0.32, 2.275);
 }
 @keyframes head{
@@ -271,7 +270,7 @@ animation: slider 12s infinite;
 #intro h4{
     position: relative;
     color: rgb(255, 255, 255);
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     font-family: var(--font1);
     letter-spacing: 3px;
     z-index: 1;
@@ -320,7 +319,6 @@ animation: slider 12s infinite;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
     padding-top: 60px;
     padding-bottom: 20px;
     border-top: 4px solid rgb(231, 79, 79);
@@ -328,7 +326,7 @@ animation: slider 12s infinite;
  #introabout h1{
     position: relative;
     color: rgb(0, 207, 145);
-    font-size: 4rem;
+    font-size: 3.5rem;
     z-index: 1;
     padding: 5px 20px;
 }
@@ -340,9 +338,10 @@ animation: slider 12s infinite;
 #introabout h3{
     position: relative;
     color: var(--color1);
-    font-size: 2.3rem;
+    font-size: 2rem;
     z-index: 1;
-    font-family: 'Smooch', cursive;
+    font-family: 'Square Peg', cursive;
+  
     letter-spacing: 3px;
     margin-top: 10px;
 }
@@ -391,7 +390,7 @@ animation: slider 12s infinite;
 /*Third*/
 #introextra{
     background-image: linear-gradient(rgba(0, 0, 0, 0.671),
-                       rgba(0, 0, 0, 0.664)), url("images/tbg1.jpg");
+                       rgba(0, 0, 0, 0.664)), url("images/tbge1.jpeg");
     background-repeat: no-repeat;
     background-position: fixed;
     background-size: cover;
@@ -822,6 +821,14 @@ footer .balls{
 #franchise .files{
     z-index: 1;
     width: 50vw;
+}
+#franchise #whatsappkey h5{
+    padding: 1px 5px;
+    margin-bottom: 5px;
+    font-size: 1.25rem;
+    border-radius:5px ;
+    color:rgb(255, 255, 255);
+    background: rgb(27, 31, 255);
 }
 /*--------------------------------------------Contact page-------------------------------------------*/
 #contact{

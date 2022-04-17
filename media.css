@@ -24,13 +24,13 @@
 
 @media screen and (max-width:900px){
     #introabout h3, #introfranchise h3,#aboutsec1 h3,#contactsec1 h3,#franchisesec1 h3{
-        font-size: 4.2vw;
+        font-size: 4vw;
     }
     #introabout h1{
-        font-size: 8vw;
+        font-size: 7vw;
     }
     #introabout p{
-        font-size: 3vw;
+        font-size: 2.5vw;
         padding: 0px 30px;
     }
     #introabout{
@@ -71,14 +71,11 @@
         display: block; 
     }
     #introabout h3, #introfranchise h3,#aboutsec1 h3,#contactsec1 h3,#franchisesec1 h3{
-        font-size: 4.8vw;
-    }
-    #introabout h1{
-        font-size: 9vw;
+        font-size: 4.75vw;
     }
     #introabout p{
-        font-size: 3.5vw;
-        padding: 20px 6vw;
+        font-size: 3vw;
+        padding: 20px 3vw;
     }
     #aboutmore, #franchisemore{
         font-size: 3vw;
@@ -133,12 +130,12 @@
     
         25% {
             background-image:linear-gradient(rgba(0, 0, 0, 0.671),
-                 rgba(0, 0, 0, 0.664)), url("images/tbg6.jpg") ;  
+                 rgba(0, 0, 0, 0.664)), url("images/tbg6.jpeg") ;  
         }
     
         45% {
             background-image:linear-gradient(rgba(0, 0, 0, 0.671),
-                 rgba(0, 0, 0, 0.664)), url("images/tbg6.jpg") ;  
+                 rgba(0, 0, 0, 0.664)), url("images/tbg6.jpeg") ;  
         }
     
         50% {
@@ -163,7 +160,7 @@
         }
     }
     #intro h1{
-        font-size: 12vw;
+        font-size: 9.25vw;
         margin-top: 60px; 
     }
     #aboutsec1 h1,#contactsec1 h1,#franchisesec1 h1{
@@ -180,37 +177,37 @@
         width: 400px;
     }
     .slider {
-        width: 90vw;
-        height: 57.6vw;
+        width: 80vw;
+        height: 53vw;
     }
 
 }
 @media screen and (max-width:500px){
     #intro h1,#aboutsec1 h1,#contactsec1 h1,#franchisesec1 h1{
-        font-size: 12vw;
+        font-size: 9.8vw;
     }
     #intro h3,#aboutsec1 h3,#contactsec1 h3,#franchisesec1 h3{
-        font-size: 8vw;
+        font-size: 6.25vw;
         width: 100vw;
     }
     #intro h4{
-        font-size: 6vw;
+        font-size: 5vw;
         letter-spacing: 3px;
     }
     #frlogo{
         height: 40vw;
     }
     #introabout h3, #introfranchise h3{
-        font-size: 6vw;
+        font-size: 5.75vw;
     }
     #introabout h1{
-        font-size: 9.5vw;
+        font-size: 7vw;
     }
     #introabout .container div{
         padding: 0px 4vw;
     } 
     #introabout p{
-        font-size: 4.5vw;
+        font-size: 4vw;
         padding: 10px 0px;
     }
     #aboutmore, #franchisemore{
@@ -276,10 +273,10 @@
           font-size: 6.4vw;
     }
     #introabout h1{
-        font-size: 9.20vw;
+        font-size: 7.5vw;
     }
     #introabout p{
-        font-size: 5vw;
+        font-size: 4.5vw;
     }
     #aboutmore, #franchisemore{
         font-size: 4.75vw;
@@ -317,10 +314,7 @@
 }
 @media screen and (max-width:275px){
     #intro h4{
-        margin-top: 7vh;
-    }
-    #introabout h1{
-        font-size: 8vw;
+        margin-top: 5vh;
     }
     #intro h3, #introabout h3, #introfranchise h3{
         font-size: 6vw;
@@ -342,18 +336,21 @@
     }
     #explorekey h5 ,#whatsappkey h5{
         padding: 5px;
-        font-size: 1rem;
+        font-size: 0.75rem;
     }
     #key, #whatsapp{
         height: 30px;
         width: 30px;
     }
      /*--------------------------------------------About us page-------------------------------------------*/
-    #aboutsec1 h1, #franchisesec1 h1,#contactsec1{
+    #aboutsec1 h1, #franchisesec1 h1{
             font-size: 20vw;
     }
-    #aboutsec1 h3,#aboutsec2 h3, #franchisesec1 h3{
+    #aboutsec1 h3,#aboutsec2 h3{
         font-size: 12vw;
+    }
+    #franchise #franchisesec1 h3{
+        font-size: 10vw;
     }
     #aboutsec2 .container p {
         font-size: 6vw;
@@ -399,13 +396,5 @@
     overflow-y: hidden;
     z-index: 1;
 }
-#intro h1{
-    font-size: 15vh;
-}
-#intro h3{
-    font-size: 8vh;
-}
-#intro h4{
-    font-size: 5vh;
-}
+
 }

@@ -901,16 +901,15 @@ footer .balls{
 }
 #contact h3{
     font-size: 2.5rem;
-    color: rgb(255, 208, 0);
-    border-bottom: 2px dotted rgb(255, 208, 0);
+    color: var(--color1);
+    border-bottom: 2px dotted var(--color1);
     padding-top: 10px;
 }
 #contact h2{
     font-size: 3rem;
-    color: rgb(32, 136, 255);
+    color: rgb(16, 42, 187);
     font-weight: bolder;
-    border-bottom: 2px solid rgb(32, 136, 255);
-   
+    border-bottom: 2px solid rgb(16, 42, 187);
     padding-top: 10px;
 }
 #contact h4{

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Calculator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        table {
+            overflow: hidden;
+            border: 2px solid black;
+            background: rgb(255, 255, 255);
+            height: 320px;
+            width: 240px;
+        }
+
+        .rsp {
+            width: 60px;
+            height: 160px;
+
+        }
+
+        p {
+            width: 240px;
+            float: right;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: right;
+            border: 2px solid rgb(249, 124, 56);
+        }
+
+        #input {
+            height: 130px;
+        }
+
+        #output {
+            height: 30px;
+            margin-top: 2px;
+        }
+
+        .btn {
+            width: 60px;
+            height: 40px;
+            text-align: center;
+            background: rgb(249, 124, 56);
+            font: 1em sans-serif;
+            font-weight: bolder;
+            color: rgb(255, 255, 255);
+            box-shadow: 0.25px 0.25px 4px 0px rgba(0, 0, 0, 0.781);
+        }
+
+        .btn:hover {
+            background: rgb(216, 114, 59);
+            box-shadow: none;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="4" class="rsp">
+                <p id="input"></p>
+                <p id="output">0</p>
+            </td>
+        </tr>
+        <tr>
+            <td class="btn" onclick="oprand(1)">1</td>
+            <td class="btn" onclick="oprand(2)">2</td>
+            <td class="btn" onclick="oprand(3)">3</td>
+            <td class="btn" onclick="operator('/')">/</td>
+        </tr>
+        <tr>
+            <td class="btn" onclick="oprand(4)">4</td>
+            <td class="btn" onclick="oprand(5)">5</td>
+            <td class="btn" onclick="oprand(6)">6</td>
+            <td class="btn" onclick="operator('*')">*</td>
+        </tr>
+        <tr>
+            <td class="btn" onclick="oprand(7)">7</td>
+            <td class="btn" onclick="oprand(8)">8</td>
+            <td class="btn" onclick="oprand(9)">9</td>
+            <td class="btn" onclick="operator('+')">+</td>
+        </tr>
+        <tr>
+            <td class="btn" onclick="remove()">x</td>
+            <td class="btn" onclick="oprand(0)">0</td>
+            <td class="btn" onclick="equals()">=</td>
+            <td class="btn" onclick="operator('-')">-</td>
+        </tr>
+
+    </table>
+    <script>
+        var x = 0;
+        var y = 1;
+        var c = -1;
+        var arr = [];
+        function oprand(a) {
+            if (y == 1) {
+                c++;
+                y = 0;
+            }
+            x = (x * 10 + a);
+            arr[c] = x;
+
+            let d = result();
+            let e = toString();
+            document.getElementById('input').innerHTML = e;
+            document.getElementById('output').innerHTML = d;
+        }
+        function operator(a) {
+            if (c >= 0) {
+                if (y == 0) {
+                    c++;
+                    y = 1;
+                    x = 0;
+                }
+                arr[c] = a;
+                let e = toString();
+                document.getElementById('input').innerHTML = e;
+            }
+        }
+        function remove() {
+            if (c > 0) {
+                c--;
+                if (c % 2 == 0) {
+                    y = 0;
+                    x = arr[c];
+                } else {
+                    y = 1;
+                    x = 0;
+                }
+                let d = result();
+                let e = toString();
+                document.getElementById('input').innerHTML = e;
+                document.getElementById('output').innerHTML = d;
+            } else {
+                c--;
+                y = 1;
+                x = 0;
+                document.getElementById('input').innerHTML = "";
+                document.getElementById('output').innerHTML = "";
+            }
+        }
+        function equals() {
+            arr[0] = result();
+            x = arr[0];
+            y = 0;
+            c = 0;
+            document.getElementById('input').innerHTML = x;
+            document.getElementById('output').innerHTML = x;
+
+        }
+        function result() {
+            let rtn = arr[0];
+            let count = c;
+            if (c % 2 != 0) {
+                count = c - 1;
+            }
+            for (let i = 1; i < count; i++) {
+                switch (arr[i]) {
+                    case '+': rtn += arr[i + 1];
+                        break;
+                    case '-': rtn -= arr[i + 1];
+                        break;
+                    case '*': rtn *= arr[i + 1];
+                        break;
+                    case '/': rtn /= arr[i + 1];
+                        break;
+                }
+                i++;
+            }
+            if (c < 2) {
+                return 0;
+            } else {
+                return rtn;
+            }
+        }
+        function toString() {
+            let s = arr[0];
+            for (let i = 1; i <= c; i++) {
+                s += arr[i];
+            }
+            return s;
+        }
+    </script>
+
+</body>
+
+</html>

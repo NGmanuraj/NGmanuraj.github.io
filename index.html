@@ -9,6 +9,7 @@
             box-sizing: border-box;
             margin: 0%;
             padding: 0%;
+            
         }
 
         body {
@@ -54,6 +55,7 @@
         }
 
         .btn {
+            width:25vw;
             text-align: center;
             background: rgb(135, 197, 255);
             font-size: 4rem;
@@ -79,31 +81,32 @@
             </td>
         </tr>
         <tr>
-            <td class="btn" onclick="oprand(1)">1</td>
-            <td class="btn" onclick="oprand(2)">2</td>
-            <td class="btn" onclick="oprand(3)">3</td>
-            <td class="btn" onclick="operator('/')">/</td>
+            <td ><button class="btn" onclick="oprand(1)">1</button></td>
+            <td ><button class="btn" onclick="oprand(2)">2</button></td>
+            <td ><button class="btn" onclick="oprand(3)">3</button></td>
+            <td ><button class="btn" onclick="operator('/')">/</button></td>
         </tr>
         <tr>
-            <td class="btn" onclick="oprand(4)">4</td>
-            <td class="btn" onclick="oprand(5)">5</td>
-            <td class="btn" onclick="oprand(6)">6</td>
-            <td class="btn" onclick="operator('*')">*</td>
+            <td ><button class="btn" onclick="oprand(4)">4</button></td>
+            <td ><button class="btn" onclick="oprand(5)">5</button></td>
+            <td ><button class="btn" onclick="oprand(6)">6</button></td>
+            <td ><button class="btn" onclick="operator('*')">*</button></td>
         </tr>
         <tr>
-            <td class="btn" onclick="oprand(7)">7</td>
-            <td class="btn" onclick="oprand(8)">8</td>
-            <td class="btn" onclick="oprand(9)">9</td>
-            <td class="btn" onclick="operator('+')">+</td>
+            <td ><button class="btn" onclick="oprand(7)">7</button></td>
+            <td ><button class="btn" onclick="oprand(8)">8</button></td>
+            <td ><button class="btn" onclick="oprand(9)">9</button></td>
+            <td ><button class="btn" onclick="operator('+')">+</button></td>
         </tr>
         <tr>
-            <td class="btn" onclick="remove()">C</td>
-            <td class="btn" onclick="oprand(0)">0</td>
-            <td class="btn" onclick="equals()">=</td>
-            <td class="btn" onclick="operator('-')">-</td>
+            <td><button class="btn">.</button></td>
+            <td ><button class="btn" onclick="oprand(0)">0</button></td>
+            <td ><button class="btn" onclick="equals()">=</button></td>
+            <td ><button class="btn" onclick="operator('-')">-</button></td>
         </tr>
         <tr>
-            <td class="btn" colspan="4" onclick="window.location.reload()">Clear All</td>
+            <td ><button class="btn" onclick="remove()">C</button></td>
+            <td colspan="3" ><button class="btn" onclick="window.location.reload()" style="width: 75vw;">Clear all</button></td>
         </tr>
     </table>
     <script>
@@ -119,7 +122,6 @@
             }
             x = (x * 10 + a);
             arr[c] = x;
-
             let d = result();
             let e = toString();
             document.getElementById('input').innerHTML = e;

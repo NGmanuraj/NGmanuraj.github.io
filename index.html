@@ -9,202 +9,369 @@
             box-sizing: border-box;
             margin: 0%;
             padding: 0%;
-            
+            overflow: hidden;
         }
 
         body {
             width: 100vw;
-            height: 90vh;
-            overflow: hidden;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
 
         }
 
-        table {
-            overflow: hidden;
-            border: 4px solid black;
-            background: rgb(255, 255, 255);
-            height: 100%;
-            width: 100%;
+        #cal-cover {
+            height: 600px;
+            width: 350px;
         }
 
-        .rsp {
+        #load-anime {
+            height: 100%;
             width: 100%;
-            height: 35%;
+            position: relative;
+            background-color: rgb(153, 153, 153);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            animation: opening 1s 1.5s 1;
+            animation-timing-function: linear;
+
+        }
+
+        @keyframes opening {
+            0% {
+                left: 0%;
+            }
+
+            100% {
+                left: 350px;
+            }
+        }
+
+        .loading-cover {
+            width: 250px;
+            height: 8px;
+            border: 1.5px solid black;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+
+        .loading {
+            width: 100%;
+            height: 8px;
+            border-radius: 50px;
+            background-color: rgb(255, 0, 0);
+            animation: slide 1.5s linear 0s 1;
+        }
+
+        @keyframes slide {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        #inner-box {
+            height: 100%;
+            width: 100%;
+            position: relative;
+            background-color: rgb(0, 0, 0);
+            display: grid;
+            grid-template-rows: 33.33% 66.67%;
+            animation: slide2 1s 1.5s 1;
+            animation-timing-function: linear;
+        }
+
+        @keyframes slide2 {
+            0% {
+                top: -600px;
+                left: -350px;
+            }
+
+            100% {
+                top: -600px;
+                left: 0px;
+            }
+        }
+
+        ul {
+            width: 100%;
+            height: 100%;
+        }
+
+        .input-area {
+            height: 82%;
+            width: 100%;
+            padding-top: 5%;
+            padding-left: 5%;
+            font-size: 1.5rem;
+        }
+
+        .output-area {
+            height: 18%;
+            width: 100%;
+            font-size: 1.8rem;
         }
 
         p {
+            width: 100%;
+            height: 100%;
             float: right;
             font-weight: bold;
-            font-size: 3rem;
             text-align: right;
-            padding: 0px 2%;
+            padding: 0px 4%;
+            color: white;
+            overflow-wrap: break-word;
+            overflow-y: auto;
         }
 
-        #input {
-            width: 100%;
-            height: 80%;
-            border-bottom: 4px solid black;
+        .key-area {
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 20% 20% 20% 20% 20%;
+            align-items: center;
+            padding: 2% 0%;
+            padding-left: 3%;
         }
 
-        #output {
-            height: 20%;
-            width: 100%;
+        .key-area li {
+            border-radius: 50%;
+            width: 83%;
+            height: 85%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .btn {
-            width:25vw;
-            text-align: center;
-            background: rgb(135, 197, 255);
-            font-size: 4rem;
-            font-family:monospace;
-            font-weight: bolder;
-            color: rgb(0, 0, 0);
-            box-shadow: 0.25px 0.25px 4px 0px rgba(0, 0, 0, 0.781);
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            border: none;
+            font-size: 1.6rem;
+            background: rgb(56, 55, 55);
+            color: rgb(255, 255, 255);
         }
 
-        .btn:on {
-            background: rgb(216, 114, 59);
-            box-shadow: none;
+        .operator {
+            background:rgb(255, 131, 15);
+        }
+        .clear{
+            background: rgb(255, 242, 218);
+            color: black;
         }
     </style>
 </head>
 
 <body>
-    <table>
-        <tr class="rsp">
-            <td colspan="4" class="rsp" >
-                <p id="input"></p>
-                <p id="output">0</p>
-            </td>
-        </tr>
-        <tr>
-            <td ><button class="btn" onclick="oprand(1)">1</button></td>
-            <td ><button class="btn" onclick="oprand(2)">2</button></td>
-            <td ><button class="btn" onclick="oprand(3)">3</button></td>
-            <td ><button class="btn" onclick="operator('/')">/</button></td>
-        </tr>
-        <tr>
-            <td ><button class="btn" onclick="oprand(4)">4</button></td>
-            <td ><button class="btn" onclick="oprand(5)">5</button></td>
-            <td ><button class="btn" onclick="oprand(6)">6</button></td>
-            <td ><button class="btn" onclick="operator('*')">*</button></td>
-        </tr>
-        <tr>
-            <td ><button class="btn" onclick="oprand(7)">7</button></td>
-            <td ><button class="btn" onclick="oprand(8)">8</button></td>
-            <td ><button class="btn" onclick="oprand(9)">9</button></td>
-            <td ><button class="btn" onclick="operator('+')">+</button></td>
-        </tr>
-        <tr>
-            <td><button class="btn">.</button></td>
-            <td ><button class="btn" onclick="oprand(0)">0</button></td>
-            <td ><button class="btn" onclick="equals()">=</button></td>
-            <td ><button class="btn" onclick="operator('-')">-</button></td>
-        </tr>
-        <tr>
-            <td ><button class="btn" onclick="remove()">C</button></td>
-            <td colspan="3" ><button class="btn" onclick="window.location.reload()" style="width: 75vw;">Clear all</button></td>
-        </tr>
-    </table>
+    <div id="cal-cover">
+        <div id="load-anime">
+            <h1>GENERAL</h1>
+            <h1>PURPOSE</h1>
+            <h1>CALCULATOR</h1>
+            <div class="loading-cover">
+                <div class="loading">
+                </div>
+            </div>
+        </div>
+        <div id="inner-box">
+
+            <ul class="result-area">
+                <li class="input-area">
+                    <p id="input"></p>
+                </li>
+                <li class="output-area">
+                    <p id="output">0</p>
+                </li>
+            </ul>
+
+            <ul class="key-area">
+                <li><button class="btn clear" onclick="remove()">C</button></li>
+                <li colspan="3"><button class="btn clear" onclick="window.location.reload()" style="width: 75vw;">AC</button>
+                </li>
+                <li><button class="btn operator">x2</button></li>
+                <li><button class="btn operator">%</button></li>
+                <li><button class="btn" onclick="oprand('7')">7</button></li>
+                <li><button class="btn" onclick="oprand('8')">8</button></li>
+                <li><button class="btn" onclick="oprand('9')">9</button></li>
+                <li><button class="btn operator" onclick="operator('+')">+</button></li>
+                <li><button class="btn" onclick="oprand('4')">4</button></li>
+                <li><button class="btn" onclick="oprand('5')">5</button></li>
+                <li><button class="btn" onclick="oprand('6')">6</button></li>
+                <li><button class="btn operator" onclick="operator('*')">x</button></li>
+                <li><button class="btn" onclick="oprand('1')">1</button></li>
+                <li><button class="btn" onclick="oprand('2')">2</button></li>
+                <li><button class="btn" onclick="oprand('3')">3</button></li>
+                <li><button class="btn operator" onclick="operator('/')">/</button></li>
+                <li><button class="btn" onclick="oprand('.')">.</button></li>
+                <li><button class="btn" onclick="oprand('0')">0</button></li>
+                <li><button class="btn operator" onclick="equals()">=</button></li>
+                <li><button class="btn operator" onclick="operator('-')">-</button></li>
+            </ul>
+
+        </div>
+    </div>
     <script>
-        var x = 0;
-        var y = 1;
-        var c = -1;
-        var whendevidewithzero = 0;
-        var arr = [];
-        function oprand(a) {
-            if (y == 1) {
-                c++;
-                y = 0;
+        setTimeout(() => {
+            document.getElementById('load-anime').style.display = 'none';
+        }, 2500);
+        document.addEventListener("keydown", e => {
+            switch (e.key) {
+                case '1': oprand('1');
+                    break;
+                case '2': oprand('2');
+                    break;
+                case '3': oprand('3');
+                    break;
+                case '4': oprand('4');
+                    break;
+                case '5': oprand('5');
+                    break;
+                case '6': oprand('6');
+                    break;
+                case '7': oprand('7');
+                    break;
+                case '8': oprand('8');
+                    break;
+                case '9': oprand('9');
+                    break;
+                case '0': oprand('0');
+                    break;
+                case '.': oprand('.');
+                    break;
+                case '/': operator('/');
+                    break;
+                case '*': operator('*');
+                    break;
+                case '-': operator('-');
+                    break;
+                case '+': operator('+');
+                    break;
+                case 'Backspace': remove();
+                    break;
+                case '=': equals();
+                    break;
+                case 'Enter': equals();
+                    break;
+                default:
+                    break;
             }
-            x = (x * 10 + a);
-            arr[c] = x;
+        });
+        var key = 1;
+        var arrIndex = -1;
+        var arr = [];
+        var ifequal = 0;
+
+
+        function oprand(inp) {
+            if (key == 1) {
+                key = 0;
+                arrIndex++;
+                if (inp == '.') {
+                    arr[arrIndex] = '0.';
+                } else {
+                    arr[arrIndex] = inp;
+                }
+            } else {
+                if (ifequal == 1) {
+                    ifequal = 0;
+                    if (inp == '.') {
+                        arr[arrIndex] = '0.';
+                    } else {
+                        arr[arrIndex] = inp;
+                    }
+                } else {
+                    if (inp == '.') {
+                        if (arr[arrIndex].indexOf('.') == -1) {
+                            arr[arrIndex] += inp;
+                        }
+                    }
+                    else if (arr[arrIndex] == '0') {
+                        arr[arrIndex] = inp;
+                    }
+                    else {
+                        arr[arrIndex] += inp;
+                    }
+                }
+            }
             let d = result();
             let e = toString();
             document.getElementById('input').innerHTML = e;
             document.getElementById('output').innerHTML = d;
         }
-        function operator(a) {
-            if (c >= 0) {
-                if (y == 0) {
-                    c++;
-                    y = 1;
-                    x = 0;
+        function operator(inp) {
+            if (arrIndex >= 0) {
+                if (key == 0) {
+                    arrIndex++;
+                    key = 1;
                 }
-                arr[c] = a;
+                arr[arrIndex] = inp;
                 let e = toString();
                 document.getElementById('input').innerHTML = e;
             }
         }
+        function equals() {
+            arr[0] = result();
+            document.getElementById('input').innerHTML = arr[0];
+            document.getElementById('output').innerHTML = arr[0];
+            key = 0;
+            arrIndex = 0;
+            ifequal = 1;
+        }
         function remove() {
-            if (c > 0) {
-                c--;
-                if (c % 2 == 0) {
-                    y = 0;
-                    x = arr[c];
-                } else {
-                    y = 1;
-                    x = 0;
+            if (arrIndex >= 0) {
+                if (key == 0) {
+                    arr[arrIndex] = arr[arrIndex].substr(0, arr[arrIndex].length - 1);
+                    if (arr[arrIndex].length == 0) {
+                        key = 1;
+                        arrIndex--;
+                    }
+                }
+                else {
+                    key = 0;
+                    arrIndex--;
                 }
                 let d = result();
                 let e = toString();
                 document.getElementById('input').innerHTML = e;
                 document.getElementById('output').innerHTML = d;
-            } else if (c == 0) {
-                c--;
-                y = 1;
-                x = 0;
-                document.getElementById('input').innerHTML = "";
-                document.getElementById('output').innerHTML = "";
-            }
-            else if (whendevidewithzero == 1) {
-                whendevidewithzero = 0;
-                document.getElementById('input').innerHTML = "";
-                document.getElementById('output').innerHTML = "";
-            }
-        }
-        function equals() {
-            arr[0] = result();
-            x = arr[0];
-            document.getElementById('input').innerHTML = x;
-            document.getElementById('output').innerHTML = x;
-            if (x == "can't divide with zero") {
-                y = 1;
-                x = 0;
-                c = -1;
-                whendevidewithzero = 1;
-            } else {
-                y = 0;
-                c = 0;
             }
 
         }
         function result() {
-            let rtn = arr[0];
-            let count = c;
-            if (c % 2 != 0) {
-                count = c - 1;
+            let rtn = Number(arr[0]);
+            let count = arrIndex;
+            if (arrIndex % 2 != 0) {
+                count = arrIndex - 1;
             }
             for (let i = 1; i < count; i++) {
-                if (arr[i] == '/' && arr[i + 1] == 0) {
-                    return "can't divide with zero";
+                if (arr[i] == '/' && Number(arr[i + 1]) == 0) {
+                    window.alert('CANNOT DIVIDE WITH ZERO');
+                    if (arrIndex <= 2) {
+                        return 0;
+                    } else {
+                        return rtn;
+                    }
                 }
                 switch (arr[i]) {
-                    case '+': rtn += arr[i + 1];
+                    case '+': rtn += Number(arr[i + 1]);
                         break;
-                    case '-': rtn -= arr[i + 1];
+                    case '-': rtn -= Number(arr[i + 1]);
                         break;
-                    case '*': rtn *= arr[i + 1];
+                    case '*': rtn *= Number(arr[i + 1]);
                         break;
-                    case '/': rtn /= arr[i + 1];
+                    case '/': rtn /= Number(arr[i + 1]);
                         break;
                 }
                 i++;
             }
-            if (c < 2) {
+            if (arrIndex < 2) {
                 return 0;
             } else {
                 return rtn;
@@ -212,11 +379,12 @@
         }
         function toString() {
             let s = arr[0];
-            for (let i = 1; i <= c; i++) {
+            for (let i = 1; i <= arrIndex; i++) {
                 s += arr[i];
             }
             return s;
         }
+
     </script>
 
 </body>

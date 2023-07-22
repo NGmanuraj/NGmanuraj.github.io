@@ -1,392 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <title>Calculator</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0%;
-            padding: 0%;
-            overflow: hidden;
-        }
-
-        body {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        #cal-cover {
-            height: 600px;
-            width: 350px;
-        }
-
-        #load-anime {
-            height: 100%;
-            width: 100%;
-            position: relative;
-            background-color: rgb(153, 153, 153);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 2;
-            animation: opening 1s 1.5s 1;
-            animation-timing-function: linear;
-
-        }
-
-        @keyframes opening {
-            0% {
-                left: 0%;
-            }
-
-            100% {
-                left: 350px;
-            }
-        }
-
-        .loading-cover {
-            width: 250px;
-            height: 8px;
-            border: 1.5px solid black;
-            border-radius: 50px;
-            margin-top: 10px;
-        }
-
-        .loading {
-            width: 100%;
-            height: 8px;
-            border-radius: 50px;
-            background-color: rgb(255, 0, 0);
-            animation: slide 1.5s linear 0s 1;
-        }
-
-        @keyframes slide {
-            0% {
-                width: 0%;
-            }
-
-            100% {
-                width: 100%;
-            }
-        }
-
-        #inner-box {
-            height: 100%;
-            width: 100%;
-            position: relative;
-            background-color: rgb(0, 0, 0);
-            display: grid;
-            grid-template-rows: 33.33% 66.67%;
-            animation: slide2 1s 1.5s 1;
-            animation-timing-function: linear;
-        }
-
-        @keyframes slide2 {
-            0% {
-                top: -600px;
-                left: -350px;
-            }
-
-            100% {
-                top: -600px;
-                left: 0px;
-            }
-        }
-
-        ul {
-            width: 100%;
-            height: 100%;
-        }
-
-        .input-area {
-            height: 82%;
-            width: 100%;
-            padding-top: 5%;
-            padding-left: 5%;
-            font-size: 1.5rem;
-        }
-
-        .output-area {
-            height: 18%;
-            width: 100%;
-            font-size: 1.8rem;
-        }
-
-        p {
-            width: 100%;
-            height: 100%;
-            float: right;
-            font-weight: bold;
-            text-align: right;
-            padding: 0px 4%;
-            color: white;
-            overflow-wrap: break-word;
-            overflow-y: auto;
-        }
-
-        .key-area {
-            display: grid;
-            grid-template-columns: 25% 25% 25% 25%;
-            grid-template-rows: 20% 20% 20% 20% 20%;
-            align-items: center;
-            padding: 2% 0%;
-            padding-left: 3%;
-        }
-
-        .key-area li {
-            border-radius: 50%;
-            width: 83%;
-            height: 85%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .btn {
-            border-radius: 50%;
-            width: 100%;
-            height: 100%;
-            border: none;
-            font-size: 1.6rem;
-            background: rgb(56, 55, 55);
-            color: rgb(255, 255, 255);
-        }
-
-        .operator {
-            background:rgb(255, 131, 15);
-        }
-        .clear{
-            background: rgb(255, 242, 218);
-            color: black;
-        }
-    </style>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" type="text/css" href="css/all.min.css">
+    <title>Tea Company - India's Fastest Growing Tea Cafe Brand</title>
+    <meta name="description"
+        content="The Tea Company introduce itself in 2016, in food and beverage industry. The Tea Company started as a
+    tea cafe and in few year became fastest growing tea cafe franchise in india. We have 10 outlets in 3 states in india.">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <!-- _______________________________________________________--> 
+    <meta name="author" content="Nishant Gupta">
 </head>
 
-<body>
-    <div id="cal-cover">
-        <div id="load-anime">
-            <h1>GENERAL</h1>
-            <h1>PURPOSE</h1>
-            <h1>CALCULATOR</h1>
-            <div class="loading-cover">
-                <div class="loading">
-                </div>
-            </div>
+<body id="index">
+    <nav id="navigation">
+        <img src="images/logo.png" alt="" id="nlogo">
+        <ul id="navul">
+            <li class="navulli"><a href="index.html">
+                    <h1>Tea Company</h1>
+                </a></li>
+            <li class="navulli"><a href="aboutus.html">About us</a></li>
+            <li class="navulli"><a href="franchise.html">Franchise</a></li>
+            <li class="navulli"><a href="contact.html">Contact</a></li>
+            <i class="fas fa-bars fa-2x" onclick="secnavDisplay()" id="bars"></i>
+        </ul>
+    </nav>
+    <aside id="secnav" style=" display: none;">
+        <ul id="secnavul">
+            <li class="secnavulli"><a href="index.html">
+                    <h1>Tea Company</h1>
+                </a></li>
+            <li class="secnavulli"><a href="aboutus.html">About us</a></li>
+            <li class="secnavulli"><a href="franchise.html">Franchise</a></li>
+            <li class="secnavulli"><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="social" id="secsocial">
+            <a href="https://www.instagram.com/theteacompanyofficially/" target="_blank"><i class="fab fa-instagram fa-lg"
+                    style="color: rgb(192, 1, 160); "></i></a>
+            <a href="https://m.facebook.com/Theteacompany-100430345917710/?ref=bookmarks" target="_blank"><i
+                    class="fab fa-facebook fa-lg" style="color: rgb(58, 85, 175);"></i></a>
         </div>
-        <div id="inner-box">
-
-            <ul class="result-area">
-                <li class="input-area">
-                    <p id="input"></p>
-                </li>
-                <li class="output-area">
-                    <p id="output">0</p>
-                </li>
-            </ul>
-
-            <ul class="key-area">
-                <li><button class="btn clear" onclick="remove()">C</button></li>
-                <li colspan="3"><button class="btn clear" onclick="window.location.reload()" style="width: 75vw;">AC</button>
-                </li>
-                <li><button class="btn operator">x2</button></li>
-                <li><button class="btn operator">%</button></li>
-                <li><button class="btn" onclick="oprand('7')">7</button></li>
-                <li><button class="btn" onclick="oprand('8')">8</button></li>
-                <li><button class="btn" onclick="oprand('9')">9</button></li>
-                <li><button class="btn operator" onclick="operator('+')">+</button></li>
-                <li><button class="btn" onclick="oprand('4')">4</button></li>
-                <li><button class="btn" onclick="oprand('5')">5</button></li>
-                <li><button class="btn" onclick="oprand('6')">6</button></li>
-                <li><button class="btn operator" onclick="operator('*')">x</button></li>
-                <li><button class="btn" onclick="oprand('1')">1</button></li>
-                <li><button class="btn" onclick="oprand('2')">2</button></li>
-                <li><button class="btn" onclick="oprand('3')">3</button></li>
-                <li><button class="btn operator" onclick="operator('/')">/</button></li>
-                <li><button class="btn" onclick="oprand('.')">.</button></li>
-                <li><button class="btn" onclick="oprand('0')">0</button></li>
-                <li><button class="btn operator" onclick="equals()">=</button></li>
-                <li><button class="btn operator" onclick="operator('-')">-</button></li>
-            </ul>
-
-        </div>
+    </aside>
+    <div id="whatsappkey">
+        <h5>ask franchise?</h5>
+        <div id="whatsapp"><a href="whatsapp://send?text=Hello&phone=+919329965601" target="_blank"><i class="	fab fa-whatsapp fa-2x"
+                    style="color: rgb(255, 255, 255);"></i></a></div>
     </div>
+    <section id="intro">
+        <h3> Welcome to India's Fastest Growing Tea Cafe Brand </h3>
+        <h1>The Tea Company</h1>
+        <h4><b id="a1">Our Dream To</b><b id="a2"> Spread Our Self </b><b id="a3">In Whole World</b></h4>
+        <div id="explorekey">
+            <h5>Explore</h5>
+            <div id="key" onclick="getDown()"><i class="fas fa-arrow-down"></i></div>
+        </div>
+    </section>
+    <section id="introabout">
+        <h3 data-aos="slide-down">Let's Introduce Ourself</h3>
+        <h1 data-aos="slide-up">About The Tea Company</h1>
+        <div class="balls" data-aos="slide-up"></div>
+        <div class="container">
+            <div>
+                <p data-aos="zoom-in-right">The Tea Company introduce itself in 2016, in food and beverage industry. The
+                    Tea Company started as a
+                    tea cafe and in few year became fastest growing tea cafe franchise in India. We have 10 outlets in 3
+                    states in
+                    India. We have multiple option for tea menu and provide best products to client. We are recognize
+                    for our low
+                    investment to High-Returned business model. Our growth is a result of steady investment by
+                    management tea in terms of times and resources. We learn and adopt unique techniques for growing
+                    time and resources.
+                    We learn and adopt techniques for growing up and prepare for tea cafe room. <br> <br>We Welcome for
+                    the
+                    people who wants to grow with us.
+                </p>
+                <img src="images/kulhad.jpg" alt="" data-aos="zoom-in-left">
+            </div>
+            <h3 data-aos="zoom-in-down">Know more</h3>
+            <a id="aboutmore" href="aboutus.html" data-aos="zoom-in-up">About Us</a>
+        </div>
+
+    </section>
+    <section id="introextra">
+        <h3 data-aos="zoom-in-down">Look Around</h3>
+        <div class="balls"></div>
+        <div class="slider" data-aos="zoom-in">
+            <figure>
+                <img src="images/slider1.jpeg" alt="">
+                <img src="images/slider2.jpeg" alt="">
+                <img src="images/slider3.jpeg" alt="">
+                <img src="images/slider4.jpeg" alt="">
+                <img src="images/slider1.jpeg" alt="">
+            </figure>
+        </div>
+        <h3 data-aos="zoom-in-down">Tea's & More</h3>
+        <div class="balls"></div>
+        <div class="slider" data-aos="zoom-in">
+            <figure>
+                <img src="images/slider5.jpg" alt="">
+                <img src="images/slider6.jpg" alt="">
+                <img src="images/slider7.jpg" alt="">
+                <img src="images/slider8.jpg" alt="">
+                <img src="images/slider5.jpg" alt="">
+            </figure>
+        </div>
+    </section>
+    <section id="introfranchise">
+        <img src="images/logo.png" alt="" id="frlogo" data-aos="slide-down">
+        <h3 data-aos="slide-left">Let's Talk About Our</h3>
+        <h2 data-aos="slide-right">Franchise Business</h2>
+        <a id="franchisemore" href="franchise.html" data-aos="slide-up">Franchise</a>
+    </section>
+    <footer>
+        <h1 data-aos="slide-left">Visit The Tea Company</h1>
+        <div class="balls" data-aos="slide-left"></div>
+        <h4 data-aos="slide-right">Call Us:</h4>
+        <h4 data-aos="slide-left">9329965601</h4>
+        <h4 data-aos="slide-right">Email:</h4>
+        <h4 data-aos="slide-left">theteacompanygroup@gmail.com</h4>
+        <h4 data-aos="slide-right">Follow Us</h4>
+        <div class="social">
+            <a href="https://www.instagram.com/theteacompanyofficially/" target="_blank"><i class="fab fa-instagram fa-lg"
+                    style="color: rgb(192, 1, 160); "></i></a>
+            <a href="https://m.facebook.com/Theteacompany-100430345917710/?ref=bookmarks" target="_blank"><i
+                    class="fab fa-facebook fa-lg" style="color: rgb(58, 85, 175);"></i></a>
+        </div>
+    </footer>
+    <!--Script portion-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        setTimeout(() => {
-            document.getElementById('load-anime').style.display = 'none';
-        }, 2500);
-        document.addEventListener("keydown", e => {
-            switch (e.key) {
-                case '1': oprand('1');
-                    break;
-                case '2': oprand('2');
-                    break;
-                case '3': oprand('3');
-                    break;
-                case '4': oprand('4');
-                    break;
-                case '5': oprand('5');
-                    break;
-                case '6': oprand('6');
-                    break;
-                case '7': oprand('7');
-                    break;
-                case '8': oprand('8');
-                    break;
-                case '9': oprand('9');
-                    break;
-                case '0': oprand('0');
-                    break;
-                case '.': oprand('.');
-                    break;
-                case '/': operator('/');
-                    break;
-                case '*': operator('*');
-                    break;
-                case '-': operator('-');
-                    break;
-                case '+': operator('+');
-                    break;
-                case 'Backspace': remove();
-                    break;
-                case '=': equals();
-                    break;
-                case 'Enter': equals();
-                    break;
-                default:
-                    break;
-            }
+        AOS.init({
+            offset: 150,
+            duration: 700,
+            once: true,
         });
-        var key = 1;
-        var arrIndex = -1;
-        var arr = [];
-        var ifequal = 0;
-
-
-        function oprand(inp) {
-            if (key == 1) {
-                key = 0;
-                arrIndex++;
-                if (inp == '.') {
-                    arr[arrIndex] = '0.';
-                } else {
-                    arr[arrIndex] = inp;
-                }
-            } else {
-                if (ifequal == 1) {
-                    ifequal = 0;
-                    if (inp == '.') {
-                        arr[arrIndex] = '0.';
-                    } else {
-                        arr[arrIndex] = inp;
-                    }
-                } else {
-                    if (inp == '.') {
-                        if (arr[arrIndex].indexOf('.') == -1) {
-                            arr[arrIndex] += inp;
-                        }
-                    }
-                    else if (arr[arrIndex] == '0') {
-                        arr[arrIndex] = inp;
-                    }
-                    else {
-                        arr[arrIndex] += inp;
-                    }
-                }
-            }
-            let d = result();
-            let e = toString();
-            document.getElementById('input').innerHTML = e;
-            document.getElementById('output').innerHTML = d;
-        }
-        function operator(inp) {
-            if (arrIndex >= 0) {
-                if (key == 0) {
-                    arrIndex++;
-                    key = 1;
-                }
-                arr[arrIndex] = inp;
-                let e = toString();
-                document.getElementById('input').innerHTML = e;
-            }
-        }
-        function equals() {
-            arr[0] = result();
-            document.getElementById('input').innerHTML = arr[0];
-            document.getElementById('output').innerHTML = arr[0];
-            key = 0;
-            arrIndex = 0;
-            ifequal = 1;
-        }
-        function remove() {
-            if (arrIndex >= 0) {
-                if (key == 0) {
-                    arr[arrIndex] = arr[arrIndex].substr(0, arr[arrIndex].length - 1);
-                    if (arr[arrIndex].length == 0) {
-                        key = 1;
-                        arrIndex--;
-                    }
-                }
-                else {
-                    key = 0;
-                    arrIndex--;
-                }
-                let d = result();
-                let e = toString();
-                document.getElementById('input').innerHTML = e;
-                document.getElementById('output').innerHTML = d;
-            }
-
-        }
-        function result() {
-            let rtn = Number(arr[0]);
-            let count = arrIndex;
-            if (arrIndex % 2 != 0) {
-                count = arrIndex - 1;
-            }
-            for (let i = 1; i < count; i++) {
-                if (arr[i] == '/' && Number(arr[i + 1]) == 0) {
-                    window.alert('CANNOT DIVIDE WITH ZERO');
-                    if (arrIndex <= 2) {
-                        return 0;
-                    } else {
-                        return rtn;
-                    }
-                }
-                switch (arr[i]) {
-                    case '+': rtn += Number(arr[i + 1]);
-                        break;
-                    case '-': rtn -= Number(arr[i + 1]);
-                        break;
-                    case '*': rtn *= Number(arr[i + 1]);
-                        break;
-                    case '/': rtn /= Number(arr[i + 1]);
-                        break;
-                }
-                i++;
-            }
-            if (arrIndex < 2) {
-                return 0;
-            } else {
-                return rtn;
-            }
-        }
-        function toString() {
-            let s = arr[0];
-            for (let i = 1; i <= arrIndex; i++) {
-                s += arr[i];
-            }
-            return s;
-        }
-
     </script>
+    <script>
+        window.onscroll = function () {
+            scroll()
+        };
 
+        function scroll() {
+            if (document.body.scrollTop > 25 ||
+                document.documentElement.scrollTop > 25) {
+                document.getElementById("navigation").style.top = "0";
+                document.getElementById("explorekey").style.display = "none";
+            }
+            else {
+                document.getElementById("navigation").style.top = "-95px";
+                document.getElementById("explorekey").style.display = "flex";
+                document.getElementById("secnav").style.display = "none";
+            }
+
+        }
+        function getDown() {
+            document.body.scrollTop = "300";
+            document.documentElement.scrollTop = "300";
+        }
+        function secnavDisplay() {
+            if (document.getElementById('secnav').style.display != "none") {
+                document.getElementById('secnav').style.display = "none"
+            } else {
+                document.getElementById('secnav').style.display = "block"
+            }
+        }
+    </script>
 </body>
 
 </html>
